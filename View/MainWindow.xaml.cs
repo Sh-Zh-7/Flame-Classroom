@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlameClassroom.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,16 @@ namespace FlameClassroom
     /// </summary>
     public partial class MainWindow : Window
     {
+        public SignIn signInPage = new SignIn();
+        public SignUp signUpPage = new SignUp();
         public MainWindow()
         {
             InitializeComponent();
-            mainFrame.Navigate(new Uri("Pages/Login.xaml", UriKind.Relative));
+
+            signInPage.parentWindow = this;
+            signUpPage.parentWindow = this;
+
+            mainFrame.Content = signInPage;
         }
     }
 }

@@ -16,13 +16,20 @@ using System.Windows.Shapes;
 namespace FlameClassroom.Pages
 {
     /// <summary>
-    /// Student.xaml 的交互逻辑
+    /// SignUp.xaml 的交互逻辑
     /// </summary>
-    public partial class Login : Page
+
+    public partial class SignUp : Page
     {
-        public Login()
+        public MainWindow parentWindow { set; get; }
+        public SignUp()
         {
             InitializeComponent();
+        }
+
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            parentWindow.mainFrame.Content = parentWindow.signInPage;
         }
     }
 }

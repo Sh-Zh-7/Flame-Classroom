@@ -41,15 +41,15 @@
         </StackPanel>
         <!-- Buttons -->
         <StackPanel Grid.Row="2">
-            <Button Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
-                Content="Sign in" Height="42" Width="321" Foreground="#FFFFFF" Margin="0, 10, 0, 0"></Button>
+            <Button x:Name="signIn" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
+                Content="Sign in" Height="42" Width="321" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="SignIn_Click"></Button>
             <StackPanel Orientation="Horizontal" Height="40">
                 <Rectangle Fill="#DCDCDC" Width="130" Height="2" Margin="40, 0, 0, 0" VerticalAlignment="Center"></Rectangle>
                 <Label Content="or" Margin="15, 0, 15, 0" Foreground="#DCDCDC" VerticalAlignment="Center"></Label>
                 <Rectangle Fill="#DCDCDC" Width="130" Height="2" Margin="0, 0, 0, 0"></Rectangle>
             </StackPanel>
-            <Button Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource BlueButtonTrigger}"
-                Content="Create an account" Height="42" Width="321" Foreground="#FFFFFF">
+            <Button x:Name="createAccount" Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource BlueButtonTrigger}"
+                Content="Create an account" Height="42" Width="321" Foreground="#FFFFFF" Click="CreateAccount_Click">
             </Button>
             <Ellipse Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 15, 0, 0"  Width="45">
                 <Ellipse.Fill>

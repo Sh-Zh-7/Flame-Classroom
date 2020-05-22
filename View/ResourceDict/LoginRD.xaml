@@ -17,6 +17,8 @@
             <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
     </ControlTemplate>
+    
+    <!-- Styles -->
     <!-- 
     For button triggers
     I don't konw how to dynamicly bind colors, so I designed mulit-triggers
@@ -57,5 +59,22 @@
                 <Setter Property="Background" Value="#F15A22"></Setter>
             </Trigger>
         </Style.Triggers>
+    </Style>
+
+    <!-- Styles -->
+     <Style x:Key="FormLabel" TargetType="{x:Type Label}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Margin" Value="35, 0, 0, 5"/>
+        <Setter Property="Foreground" Value="#404040"/>
+     </Style>
+    <Style x:Key="Form" TargetType="TextBox">
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#2f2f2f"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Margin" Value="40, 0, 40, 0"/>
     </Style>
 </ResourceDictionary>

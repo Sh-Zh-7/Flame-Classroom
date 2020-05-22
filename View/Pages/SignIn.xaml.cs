@@ -20,9 +20,20 @@ namespace FlameClassroom.Pages
     /// </summary>
     public partial class SignIn : Page
     {
+        public MainWindow parentWindow { set; get; }
         public SignIn()
         {
             InitializeComponent();
+        }
+
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreateAccount_Click(object sender, RoutedEventArgs e)
+        {
+            parentWindow.mainFrame.Content = parentWindow.signUpPage;
         }
     }
 }
