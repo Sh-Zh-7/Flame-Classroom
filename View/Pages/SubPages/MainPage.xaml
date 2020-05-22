@@ -1,0 +1,61 @@
+﻿<Page x:Class="FlameClassroom.Pages.SubPages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FlameClassroom.Pages.SubPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="450"
+      Title="MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="165*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="130*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Width="55" Height="20" HorizontalAlignment="Right" Margin="0, 0, 10, 0" Content="Sign out"
+                Background="Transparent" Foreground="#F26B3A" FontWeight="Bold" BorderThickness="0"></Button>
+
+        <StackPanel Grid.Row="1">
+            <Ellipse Fill="#000000" Height="125" Width="125" Margin="0, 10, 0, 0"></Ellipse>
+            <Label Content="Username" FontSize="20" FontWeight="Bold"  HorizontalAlignment="Center"></Label>
+            <Label Content="Your description" Width="300" Foreground="#6E6E6E" FontSize="13" HorizontalContentAlignment="Center"></Label>
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Center" Margin="20, 0, 0, 0">
+                <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold">School</Label>
+                <TextBlock FontSize="15" Foreground="#6E6E6E" HorizontalAlignment="Center">WHU</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Center">
+                <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold" HorizontalContentAlignment="Center">ID</Label>
+                <TextBlock Foreground="#6E6E6E" FontSize="15" HorizontalAlignment="Center">2018302080181</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Grid.Column="2" HorizontalAlignment="Center" Margin="-20, 0, 0, 0">
+                <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold">Name</Label>
+                <TextBlock Foreground="#6E6E6E" FontSize="15" HorizontalAlignment="Center">ShZh</TextBlock>
+            </StackPanel>
+
+        </Grid>
+        <StackPanel Grid.Row="3">
+            <Button x:Name="signIn" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
+                Content="Listen" Height="42" Width="280" Foreground="#FFFFFF" Margin="0, 10, 0, 0"></Button>
+            <StackPanel Orientation="Horizontal" Height="40">
+                <Rectangle Fill="#DCDCDC" Width="105" Height="2" Margin="90, 0, 0, 0" VerticalAlignment="Center"></Rectangle>
+                <Label Content="or" Margin="15, 0, 15, 0" Foreground="#DCDCDC" VerticalAlignment="Center"></Label>
+                <Rectangle Fill="#DCDCDC" Width="105" Height="2" Margin="0, 0, 0, 0"></Rectangle>
+            </StackPanel>
+            <Button x:Name="createAccount" Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource BlueButtonTrigger}"
+                Content="Teach" Height="42" Width="280" Foreground="#FFFFFF">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,5 +1,4 @@
-﻿using FlameClassroom.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FlameClassroom
+namespace FlameClassroom.Pages.SubPages
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// MainPage.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
-        public SignIn signInPage = new SignIn();
-        public SignUp signUpPage = new SignUp();
-        public HomePage homePage = new HomePage();
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
-
-            signInPage.parentWindow = this;
-            signUpPage.parentWindow = this;
-
-            mainFrame.Content = signInPage;
         }
     }
 }
