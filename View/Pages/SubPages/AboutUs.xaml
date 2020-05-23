@@ -1,0 +1,63 @@
+﻿<Page x:Class="FlameClassroom.Pages.SubPages.AboutUs"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FlameClassroom.Pages.SubPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="450"
+      Title="AboutUs">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Row="0" Fill="#000000"></Rectangle>
+        <Label Content="Develop Team" Foreground="#FFFFFF" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Symbol" Margin="10, 5, 0, 0"></Label>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Ellipse Height="100"  Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20, 0, 0, 0">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/FlameClassroom;component/Images/shzh.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 0">
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="QQ：" FontWeight="Bold"/><Run Text="2431297348 "/></TextBlock>
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="GitHub：" FontWeight="Bold"/><Run Text="github.com/Sh-Zh-7 "/></TextBlock>
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="Email：" FontWeight="Bold"/><Run Text="zhihaoshen7@gmail.com "/></TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Ellipse Height="100"  Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20, 0, 0, 0">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/FlameClassroom;component/Images/lotherxuan.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 0">
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="QQ：" FontWeight="Bold"/><Run Text="563791534 "/></TextBlock>
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="GitHub：" FontWeight="Bold"/><Run Text="github.com/Lotherxuan "/></TextBlock>
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="Email: " FontWeight="Bold"/><Run Text="2018302120209@whu.edu.cn "/></TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <Ellipse Height="100"  Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20, 0, 0, 0">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/FlameClassroom;component/Images/cmm.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 0">
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="QQ：" FontWeight="Bold"/><Run Text="326278346 "/></TextBlock>
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="GitHub：" FontWeight="Bold"/><Run Text="github.com/Sh-Zh-7 "/></TextBlock>
+                <TextBlock Margin="0, 8" FontSize="18"><Run Text="Email：" FontWeight="Bold"/><Run Text="326278346@qq.com "/></TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

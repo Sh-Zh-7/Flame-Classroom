@@ -79,6 +79,6 @@
             <!--<Rectangle Grid.ColumnSpan="2" VerticalAlignment="Bottom" Fill="#CCCCCC" Height="2" Width="380"></Rectangle>-->
         </Grid>
         <Button Grid.Row="3" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Width="250" Height="40" Content="Confirm"
-                Foreground="#FFFFFF" FontSize="20"></Button>
+                Foreground="#FFFFFF" FontSize="15"></Button>
     </Grid>
 </Page>
