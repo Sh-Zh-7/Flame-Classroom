@@ -19,9 +19,9 @@
             <!-- Picture part -->
             <Grid Height="480" Width="400" HorizontalAlignment="Left">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="14*"/>
+                    <RowDefinition Height="17*"/>
                     <RowDefinition Height="25*"/>
-                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="20*"/>
                 </Grid.RowDefinitions>
 
                 <Rectangle Grid.Row="0" Grid.RowSpan="3" Height="480" Width="400" RadiusX="5" RadiusY="5">
@@ -32,6 +32,19 @@
                         <ImageBrush ImageSource="/FlameClassroom;component/Images/background.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <Ellipse Height="70" Width="70" Margin="60, -20, 0, 0" >
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/FlameClassroom;component/Images/icon.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Flame" HorizontalAlignment="Center" FontSize="30"  FontWeight="Bold" Margin="10, 15, 0, -10" Foreground="#F26B3A" FontFamily="Segoe Script"></Label>
+                        <Label Content="Classroom" FontSize="30"  FontWeight="Bold" Margin="10, 0" VerticalAlignment="Center" Foreground="#F26B3A" FontFamily="Segoe Script"></Label>
+                    </StackPanel> 
+                   
+                </StackPanel>
 
                 <StackPanel Grid.Row="1">
                     <Label Content="Why Sign Up?" Foreground="#FFFFFF" HorizontalAlignment="Center" FontSize="27" FontWeight="Bold" Margin="0, 0, 0, 15"></Label>

@@ -21,7 +21,11 @@
             </Rectangle.Effect>
         </Rectangle>
         <!-- Sigin and logo part -->
-        <Ellipse Fill="#666666" HorizontalAlignment="Center" Height="132" Margin="0, -100, 0, 0" Width="132"/>
+        <Ellipse HorizontalAlignment="Center" Height="132" Margin="0, -100, 0, 0" Width="132">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/FlameClassroom;component/Images/icon.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
         <Label Grid.Row="0" Content="Sign In" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                FontSize="20" FontWeight="Bold" Margin="35, 0, 0, 15"></Label>
         <!-- Form parts -->
