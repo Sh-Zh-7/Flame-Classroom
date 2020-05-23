@@ -5,10 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FlameClassroom.Pages.SubPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="450"
       Title="Others">
 
     <Grid>
-        
+        <Image Width="450" Height="500" Stretch="Fill" Source="/FlameClassroom;component/Images/others_bg.png" Opacity="0.7" />
+        <Label Content="Thanks for using" FontSize="45"  FontWeight="Bold" Margin="10, 10" FontFamily="Sitka Heading" ></Label>
+        <Label Content="Flame classroom!" FontSize="38"  FontWeight="Bold" Margin="10, 80" Foreground="#F26B3A" FontFamily="Segoe Script"></Label>
+        <TextBlock Text="(See more details on Github, star or fork me if you like!)"  TextWrapping="Wrap" FontSize="15" Margin="23,175,208.6,258" Foreground="#FFC0B8B8" FontFamily="MV Boli" />
     </Grid>
 </Page>

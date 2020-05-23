@@ -27,13 +27,14 @@ namespace FlameClassroom.Pages
             // Bind Events
             MainPageLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(MainPageLBI_MouseLeftButtonDown), true);
             UserInfoLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(UserInfoLBI_MouseLeftButtonDown), true);
-            FeedBackLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(FeedBackLBI_MouseLeftButtonDown), true);
+            HomeworkLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(HomeworkLBI_MouseLeftButtonDown), true);
             AboutUsLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(AboutUsLBI_MouseLeftButtonDown), true);
             OthersLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(OthersLBI_MouseLeftButtonDown), true);
             // Add pages to dict
             allViews.Add("mainPage", new Uri("Pages/SubPages/MainPage.xaml", UriKind.Relative));
             allViews.Add("userInfo", new Uri("Pages/SubPages/UserInfo.xaml", UriKind.Relative));
             allViews.Add("aboutUs", new Uri("Pages/SubPages/AboutUs.xaml", UriKind.Relative));
+            allViews.Add("others", new Uri("Pages/SubPages/Others.xaml", UriKind.Relative));
             // Main page by default
             frame.Navigate(allViews["mainPage"]);
         }
@@ -48,17 +49,17 @@ namespace FlameClassroom.Pages
             frame.Navigate(allViews["userInfo"]);
         }
 
-        private void FeedBackLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void AboutUsLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             frame.Navigate(allViews["aboutUs"]);
         }
 
-        private void AboutUsLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void OthersLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            frame.Navigate(allViews["others"]);
         }
 
-        private void OthersLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void HomeworkLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
         }

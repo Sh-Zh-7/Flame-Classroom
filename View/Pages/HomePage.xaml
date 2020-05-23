@@ -17,7 +17,7 @@
         <ListBox Foreground="#FFFFFF" Grid.Column="0" Width="150" HorizontalAlignment="Left" ItemContainerStyle="{StaticResource LeftList}" BorderThickness="0" FontSize="20px" FontFamily="Yu Gothic UI" Background="#F26B3A" SelectedIndex="0">
             <ListBoxItem Content="MainPage" Name="MainPageLBI" MouseLeftButtonDown="MainPageLBI_MouseLeftButtonDown"/>
             <ListBoxItem Content="UserInfo" Name="UserInfoLBI" MouseLeftButtonDown="UserInfoLBI_MouseLeftButtonDown"/>
-            <ListBoxItem Content="FeedBack" Name="FeedBackLBI" MouseLeftButtonDown="FeedBackLBI_MouseLeftButtonDown"/>
+            <ListBoxItem Content="Homework" Name="HomeworkLBI" MouseLeftButtonDown="HomeworkLBI_MouseLeftButtonDown"/>
             <ListBoxItem Content="AboutUs" Name="AboutUsLBI" MouseLeftButtonDown="AboutUsLBI_MouseLeftButtonDown"/>
             <ListBoxItem Content="Others" Name="OthersLBI" MouseLeftButtonDown="OthersLBI_MouseLeftButtonDown"/>
         </ListBox>
