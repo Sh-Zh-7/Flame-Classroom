@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FlameClassroom.ResourceDict">
+    <ControlTemplate x:Key="LiveButton" TargetType="{x:Type Button}">
+        <Border CornerRadius="7, 7, 7, 7" BorderBrush="#FFFFFF" BorderThickness="5" Background="#F26B3A">
+            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+    </ControlTemplate>
+    <Style x:Key="Icon" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="/FlameClassroom;component/Font/#iconfont"/> 
+    </Style>
+</ResourceDictionary>

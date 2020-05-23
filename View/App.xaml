@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ResourceDict/LoginRD.xaml"/>
                 <ResourceDictionary Source="ResourceDict/HomePageRD.xaml"/>
+                <ResourceDictionary Source="ResourceDict/LiveRD.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
