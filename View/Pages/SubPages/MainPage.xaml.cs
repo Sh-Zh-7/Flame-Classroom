@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlameClassroom.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace FlameClassroom.Pages.SubPages
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Listen_Click(object sender, RoutedEventArgs e)
+        {
+            StudentWnd studentWnd = new StudentWnd();
+            studentWnd.Show();
+        }
+
+        private void CreateAccount_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherWnd teacherWnd = new TeacherWnd();
+            teacherWnd.Show();
         }
     }
 }
