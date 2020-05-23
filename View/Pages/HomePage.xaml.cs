@@ -32,6 +32,7 @@ namespace FlameClassroom.Pages
             OthersLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(OthersLBI_MouseLeftButtonDown), true);
             // Add pages to dict
             allViews.Add("mainPage", new Uri("Pages/SubPages/MainPage.xaml", UriKind.Relative));
+            allViews.Add("userInfo", new Uri("Pages/SubPages/UserInfo.xaml", UriKind.Relative));
             // Main page by default
             frame.Navigate(allViews["mainPage"]);
         }
@@ -43,7 +44,7 @@ namespace FlameClassroom.Pages
 
         private void UserInfoLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            frame.Navigate(allViews["userInfo"]);
         }
 
         private void FeedBackLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

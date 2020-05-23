@@ -49,9 +49,9 @@
             <Button x:Name="signIn" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
                 Content="Listen" Height="42" Width="280" Foreground="#FFFFFF" Margin="0, 10, 0, 0"></Button>
             <StackPanel Orientation="Horizontal" Height="40">
-                <Rectangle Fill="#DCDCDC" Width="105" Height="2" Margin="90, 0, 0, 0" VerticalAlignment="Center"></Rectangle>
+                <Rectangle Fill="#DCDCDC" Width="120" Height="2" Margin="80, 0, 0, 0" VerticalAlignment="Center"></Rectangle>
                 <Label Content="or" Margin="15, 0, 15, 0" Foreground="#DCDCDC" VerticalAlignment="Center"></Label>
-                <Rectangle Fill="#DCDCDC" Width="105" Height="2" Margin="0, 0, 0, 0"></Rectangle>
+                <Rectangle Fill="#DCDCDC" Width="120" Height="2" Margin="0, 0, 0, 0"></Rectangle>
             </StackPanel>
             <Button x:Name="createAccount" Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource BlueButtonTrigger}"
                 Content="Teach" Height="42" Width="280" Foreground="#FFFFFF">

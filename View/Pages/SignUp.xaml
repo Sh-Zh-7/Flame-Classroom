@@ -47,7 +47,7 @@
             <Grid Height="480" Width="400" HorizontalAlignment="Right" VerticalAlignment="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1.5*"/>
-                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="3.5*"/>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
@@ -69,13 +69,6 @@
                     <StackPanel>
                         <Label Content="Password: " Style="{StaticResource FormLabel}"></Label>
                         <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
-                        <Label Content="You ID: " Style="{StaticResource FormLabel}"></Label>
-                        <ComboBox Width="249" Height="30" BorderBrush="White" Background="#FFE3E3E3" FontSize="14">
-                            <ListBoxItem FontSize="15">Student</ListBoxItem>
-                            <ListBoxItem FontSize="15">Teacher</ListBoxItem>
-                        </ComboBox>
                     </StackPanel>
                 </StackPanel>
 
