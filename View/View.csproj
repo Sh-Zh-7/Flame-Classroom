@@ -56,16 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\StudentLive.xaml.cs">
+      <DependentUpon>StudentLive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeacherLive.xaml.cs">
+      <DependentUpon>TeacherLive.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\StudentWnd.xaml.cs">
       <DependentUpon>StudentWnd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\TeacherWnd.xaml.cs">
       <DependentUpon>TeacherWnd.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\Live.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\SignIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,9 +79,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Pages\Live.xaml.cs">
-      <DependentUpon>Live.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SignIn.xaml.cs">
       <DependentUpon>SignIn.xaml</DependentUpon>
@@ -93,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StudentLive.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,7 +115,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TeacherLive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourceDict\HomePageRD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceDict\LiveRD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +176,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Font\iconfont.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

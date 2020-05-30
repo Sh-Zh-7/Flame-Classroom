@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlameClassroom.Pages.SubPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,11 @@ namespace FlameClassroom.Pages
     /// </summary>
     public partial class HomePage : Page
     {
-        private Dictionary<string, Uri> allViews = new Dictionary<string, Uri>();
+        public MainPage mainPage = new MainPage();
+        public UserInfo userInfo = new UserInfo();
+        public AboutUs aboutUs = new AboutUs();
+        public Others others = new Others();
+
         public HomePage()
         {
             InitializeComponent();
@@ -30,33 +35,28 @@ namespace FlameClassroom.Pages
             HomeworkLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(HomeworkLBI_MouseLeftButtonDown), true);
             AboutUsLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(AboutUsLBI_MouseLeftButtonDown), true);
             OthersLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(OthersLBI_MouseLeftButtonDown), true);
-            // Add pages to dict
-            allViews.Add("mainPage", new Uri("Pages/SubPages/MainPage.xaml", UriKind.Relative));
-            allViews.Add("userInfo", new Uri("Pages/SubPages/UserInfo.xaml", UriKind.Relative));
-            allViews.Add("aboutUs", new Uri("Pages/SubPages/AboutUs.xaml", UriKind.Relative));
-            allViews.Add("others", new Uri("Pages/SubPages/Others.xaml", UriKind.Relative));
             // Main page by default
-            frame.Navigate(allViews["mainPage"]);
+            frame.Content = mainPage;
         }
 
         private void MainPageLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame.Navigate(allViews["mainPage"]);
+            frame.Content = mainPage;
         }
 
         private void UserInfoLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame.Navigate(allViews["userInfo"]);
+            frame.Content = userInfo;
         }
 
         private void AboutUsLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame.Navigate(allViews["aboutUs"]);
+            frame.Content = aboutUs;
         }
 
         private void OthersLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame.Navigate(allViews["others"]);
+            frame.Content = others;
         }
 
         private void HomeworkLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
