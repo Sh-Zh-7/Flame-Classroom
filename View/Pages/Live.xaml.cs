@@ -20,6 +20,7 @@ namespace FlameClassroom.Pages
     /// </summary>
     public partial class Live : Page
     {
+        public MainWindow parentWindow { set; get; }
         public Live()
         {
             InitializeComponent();
@@ -28,6 +29,11 @@ namespace FlameClassroom.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Fuck");
+        }
+
+        private void End_Click(object sender, RoutedEventArgs e)
+        {
+            parentWindow.mainFrame.Content = parentWindow.homePage;
         }
     }
 }

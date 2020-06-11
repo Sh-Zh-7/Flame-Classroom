@@ -30,6 +30,9 @@ namespace FlameClassroom
         // Live environment
         public Live livePage = new Live();
 
+        // Identification
+        public string identification;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,6 +42,7 @@ namespace FlameClassroom
             signUpPage.parentWindow = this;
             homePage.parentWindow = this;
             IPInputPage.parentWindow = this;
+            livePage.parentWindow = this;
 
             homePage.SetParentWnd();
             

@@ -62,16 +62,20 @@
 
         <Grid x:Name="teacherSubmit" Grid.Row="1" Visibility="Hidden">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.6*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="0.3*"/>
             </Grid.RowDefinitions>
 
             <Rectangle Height="1" Width="350" Fill="#AAAAAA" VerticalAlignment="Top"/>
-            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your IP:" Foreground="#000000"/>
+            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input username:" Foreground="#000000"/>
             <TextBox Grid.Row="1" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
-            <Button Grid.Row="2" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
+            <Label Grid.Row="2" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your IP:" Foreground="#000000"/>
+            <TextBox Grid.Row="3" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
+            <Button Grid.Row="4" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
                 Foreground="#FFFFFF" FontSize="20" Height="40" Click="Button_Click"/>
         </Grid>
     </Grid>

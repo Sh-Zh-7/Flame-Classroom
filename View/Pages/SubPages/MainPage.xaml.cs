@@ -16,13 +16,23 @@ namespace FlameClassroom.Pages.SubPages
 
         private void Listen_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.Content = parentWindow.livePage;
+            parentWindow.mainFrame.Content = parentWindow.livePage;
 
         }
 
         private void Return_to_SignIn_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.mainFrame.Content = parentWindow.signInPage;
+            if (parentWindow.identification == "student")
+            {
+                parentWindow.mainFrame.Content = parentWindow.signInPage;
+            }
+            else if (parentWindow.identification == "teacher")
+            {
+                var newInputPage = new IPInput();
+                newInputPage.parentWindow = parentWindow;
+                parentWindow.mainFrame.Content = newInputPage;
+            }
+            
         }
     }
 }

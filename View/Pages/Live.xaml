@@ -22,7 +22,7 @@
         </Rectangle>
         <Rectangle Grid.Row="0" Fill="#F26B3A" RadiusX="15" RadiusY="15" Height="100"/>
         <Label Grid.Row="0" Content="Live Room" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="33" FontWeight="Bold" Foreground="#FFFFFF"/>
-        <Button x:Name="end"  FontSize="25" Content="End" Width="100" Height="50" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}" Foreground="#FFFFFF" HorizontalAlignment="Right" Margin="0, 0, 20, 0"></Button>
+        <Button x:Name="end"  FontSize="25" Content="End" Width="100" Height="50" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}" Foreground="#FFFFFF" HorizontalAlignment="Right" Margin="0, 0, 20, 0" Click="End_Click"></Button>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

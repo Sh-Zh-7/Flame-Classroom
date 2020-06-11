@@ -21,6 +21,7 @@ namespace FlameClassroom.Pages
     public partial class IPInput : Page
     {
         public MainWindow parentWindow { set; get; }
+
         public IPInput()
         {
             InitializeComponent();
@@ -28,12 +29,20 @@ namespace FlameClassroom.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.mainFrame.Content = parentWindow.signInPage;
+            if (parentWindow.identification == "student")
+            {
+                parentWindow.mainFrame.Content = parentWindow.signInPage;
+            } else if (parentWindow.identification == "teacher")
+            {
+                parentWindow.mainFrame.Content = parentWindow.homePage;
+            }
+
         }
 
         private void TeacherBtn_Click(object sender, RoutedEventArgs e)
         {
-            Height = 400;
+            Height = 500;
+            parentWindow.identification = "teacher";
             studentSubmit.Visibility = Visibility.Hidden;
             teacherSubmit.Visibility = Visibility.Visible;
         }
@@ -41,6 +50,7 @@ namespace FlameClassroom.Pages
         private void StudentBtn_Click(object sender, RoutedEventArgs e)
         {
             Height = 400;
+            parentWindow.identification = "student";
             teacherSubmit.Visibility = Visibility.Hidden;
             studentSubmit.Visibility = Visibility.Visible;
         }
