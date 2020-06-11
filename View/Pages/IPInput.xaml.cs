@@ -50,7 +50,7 @@ namespace FlameClassroom.Pages
 
         private void StudentBtn_Click(object sender, RoutedEventArgs e)
         {
-            Height = 400;
+            Height = 500;
             parentWindow.identification = "student";
             teacherSubmit.Visibility = Visibility.Hidden;
             studentSubmit.Visibility = Visibility.Visible;

@@ -12,6 +12,7 @@ namespace FlameClassroom.Pages
         public MainPage mainPage = new MainPage();
         public UserInfo userInfo = new UserInfo();
         public AboutUs aboutUs = new AboutUs();
+        public Undo undoPage = new Undo();
         public Others others = new Others();
 
         public MainWindow parentWindow { set; get; }
@@ -65,7 +66,7 @@ namespace FlameClassroom.Pages
 
         private void HomeworkLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            frame.Content = undoPage;
         }
     }
 }

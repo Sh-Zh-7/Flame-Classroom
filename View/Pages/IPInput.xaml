@@ -45,7 +45,7 @@
             </Grid>
         </Grid>
 
-        <Grid x:Name="studentSubmit" Grid.Row="1" Visibility="Hidden">
+        <Grid x:Name="studentSubmit" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.8*"/>
                 <RowDefinition Height="1*"/>
@@ -54,10 +54,10 @@
             </Grid.RowDefinitions>
             
             <Rectangle Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Top"/>
-            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your teacher's IP:" Foreground="#000000"/>
-            <TextBox Grid.Row="1" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
+            <Label Grid.Row="0" FontWeight="Bold" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your teacher's IP:" Foreground="#000000"/>
+            <TextBox Grid.Row="1" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text="" Height="50"></TextBox>
             <Button Grid.Row="2" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
-                Foreground="#FFFFFF" FontSize="20" Height="40" Click="Button_Click" />
+                Foreground="#FFFFFF" FontSize="20" Height="50" Click="Button_Click" />
         </Grid>
 
         <Grid x:Name="teacherSubmit" Grid.Row="1" Visibility="Hidden">
