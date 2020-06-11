@@ -28,6 +28,7 @@ namespace FlameClassroom.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
+            parentWindow.homePage = new HomePage(parentWindow);
             parentWindow.mainFrame.Content = parentWindow.homePage;
         }
 

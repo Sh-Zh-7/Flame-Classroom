@@ -25,7 +25,7 @@ namespace FlameClassroom
         // Pages
         public SignIn signInPage = new SignIn();
         public SignUp signUpPage = new SignUp();
-        public HomePage homePage = new HomePage();
+        public HomePage homePage;
         public IPInput IPInputPage = new IPInput();
         // Live environment
         public Live livePage = new Live();
@@ -40,11 +40,8 @@ namespace FlameClassroom
             // Bind parent window
             signInPage.parentWindow = this;
             signUpPage.parentWindow = this;
-            homePage.parentWindow = this;
             IPInputPage.parentWindow = this;
             livePage.parentWindow = this;
-
-            homePage.SetParentWnd();
             
             mainFrame.Content = IPInputPage;
         }

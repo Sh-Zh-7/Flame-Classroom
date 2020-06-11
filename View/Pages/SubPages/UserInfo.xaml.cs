@@ -25,5 +25,22 @@ namespace FlameClassroom.Pages.SubPages
         {
             InitializeComponent();
         }
+
+        public void SetAavatar()
+        {
+            
+            if (parentWindow.identification == "student")
+            {
+                ImageBrush myImageBrush = new ImageBrush();
+                myImageBrush.ImageSource = new BitmapImage(new Uri("Images/student.png", UriKind.Relative));
+                avatar.Fill = myImageBrush;
+            }
+            else if (parentWindow.identification == "teacher")
+            {
+                ImageBrush myImageBrush = new ImageBrush();
+                myImageBrush.ImageSource = new BitmapImage(new Uri("Images/teacher.png", UriKind.Relative));
+                avatar.Fill = myImageBrush;
+            }
+        }
     }
 }

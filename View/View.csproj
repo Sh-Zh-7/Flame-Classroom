@@ -196,5 +196,13 @@
   <ItemGroup>
     <Resource Include="Images\icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\student.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\teacher.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

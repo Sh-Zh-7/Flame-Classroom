@@ -34,6 +34,7 @@ namespace FlameClassroom.Pages
                 parentWindow.mainFrame.Content = parentWindow.signInPage;
             } else if (parentWindow.identification == "teacher")
             {
+                parentWindow.homePage = new HomePage(parentWindow);
                 parentWindow.mainFrame.Content = parentWindow.homePage;
             }
 

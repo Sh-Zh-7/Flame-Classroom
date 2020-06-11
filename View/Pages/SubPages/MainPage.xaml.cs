@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace FlameClassroom.Pages.SubPages
 {
@@ -12,6 +15,23 @@ namespace FlameClassroom.Pages.SubPages
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        public void SetAavatar()
+        {
+            
+            if (parentWindow.identification == "student")
+            {
+                ImageBrush myImageBrush = new ImageBrush();
+                myImageBrush.ImageSource = new BitmapImage(new Uri("Images/student.png", UriKind.Relative));
+                avatar.Fill = myImageBrush;
+            }
+            else if (parentWindow.identification == "teacher")
+            {
+                ImageBrush myImageBrush = new ImageBrush();
+                myImageBrush.ImageSource = new BitmapImage(new Uri("Images/teacher.png", UriKind.Relative));
+                avatar.Fill = myImageBrush;
+            }
         }
 
         private void Listen_Click(object sender, RoutedEventArgs e)

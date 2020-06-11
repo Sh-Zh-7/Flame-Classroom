@@ -16,7 +16,7 @@ namespace FlameClassroom.Pages
 
         public MainWindow parentWindow { set; get; }
 
-        public HomePage()
+        public HomePage(MainWindow mainWindow)
         {
             InitializeComponent();
             // Bind Events
@@ -28,6 +28,11 @@ namespace FlameClassroom.Pages
 
             // Main page by default
             frame.Content = mainPage;
+            mainPage.parentWindow = mainWindow;
+            userInfo.parentWindow = mainWindow;
+
+            mainPage.SetAavatar();
+            userInfo.SetAavatar();
         }
 
         public void SetParentWnd()

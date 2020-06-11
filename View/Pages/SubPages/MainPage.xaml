@@ -11,18 +11,21 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="25*"/>
             <RowDefinition Height="165*"/>
-            <RowDefinition Height="65*"/>
-            <RowDefinition Height="130*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
 
         <Button x:Name="Return_to_SignIn" Grid.Row="0" Width="55" Height="20" HorizontalAlignment="Right" Margin="0, 0, 10, 0" Content="Sign out"
                 Background="Transparent" Foreground="#F26B3A" FontWeight="Bold" BorderThickness="0" Click="Return_to_SignIn_Click"></Button>
 
         <StackPanel Grid.Row="1">
-            <Ellipse Fill="#000000" Height="125" Width="125" Margin="0, 10, 0, 0"></Ellipse>
+            <Ellipse x:Name="avatar" Fill="#000000" Height="125" Width="125" Margin="0, 10, 0, 0"></Ellipse>
             <Label Content="Username" FontSize="20" FontWeight="Bold"  HorizontalAlignment="Center"></Label>
             <Label Content="Your description" Width="300" Foreground="#6E6E6E" FontSize="13" HorizontalContentAlignment="Center"></Label>
         </StackPanel>
+        <Rectangle Grid.Row="2" Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Top"/>
+        <Rectangle Grid.Row="3" Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Top"/>
+
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -31,21 +34,21 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Center" Margin="20, 0, 0, 0">
+            <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20, 0, 0, 0">
                 <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold">School</Label>
                 <TextBlock FontSize="15" Foreground="#6E6E6E" HorizontalAlignment="Center">WHU</TextBlock>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold" HorizontalContentAlignment="Center">ID</Label>
                 <TextBlock Foreground="#6E6E6E" FontSize="15" HorizontalAlignment="Center">2018302080181</TextBlock>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Grid.Column="2" HorizontalAlignment="Center" Margin="-20, 0, 0, 0">
+            <StackPanel Orientation="Vertical" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-20, 0, 0, 0">
                 <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold">Name</Label>
                 <TextBlock Foreground="#6E6E6E" FontSize="15" HorizontalAlignment="Center">ShZh</TextBlock>
             </StackPanel>
 
         </Grid>
         <Button Grid.Row="3" x:Name="listen" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
-                Content="Listen" Height="42" Width="280" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="Listen_Click"></Button>
+                Content="Listen" Height="50" Width="280" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="Listen_Click"></Button>
     </Grid>
 </Page>
