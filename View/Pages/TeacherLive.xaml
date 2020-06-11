@@ -46,7 +46,10 @@
             <Button Grid.Column="0" Content="Attendence" Template="{StaticResource LiveButton}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"
                     Click="Button_Click"></Button>
             <TextBlock Grid.Column="0" Text="&#xe756;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,251,20.2" />
-            <Button Grid.Column="1" Content="Problem"  Style="{StaticResource RedButtonTrigger}" Template="{StaticResource LiveButton}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"></Button>
+            <ComboBox Text="Problem" Grid.Column="1" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Select</ListBoxItem>
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Judge</ListBoxItem>
+            </ComboBox>
             <TextBlock Grid.Column="1" Text="&#xe8b4;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,248,20.2" />
             <ComboBox Text="Voice" Grid.Column="2" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
                 <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Computer</ListBoxItem>
