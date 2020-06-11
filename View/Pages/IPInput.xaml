@@ -72,7 +72,7 @@
 
             <Rectangle Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Top"/>
             <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input username:" Foreground="#000000"/>
-            <TextBox Grid.Row="1" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
+            <TextBox Grid.Row="1" x:Name="test" Text="" Template="{StaticResource BorderInput}" Style="{StaticResource Form}"></TextBox>
             <Label Grid.Row="2" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your IP:" Foreground="#000000"/>
             <TextBox Grid.Row="3" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
             <Button Grid.Row="4" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"

@@ -43,15 +43,21 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Content="Mute" Template="{StaticResource LiveButton}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"
+            <Button Grid.Column="0" Content="Attendence" Template="{StaticResource LiveButton}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"
                     Click="Button_Click"></Button>
-            <TextBlock Grid.Column="0" Text="&#xe69d;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="75,22,186,20.2" />
-            <Button Grid.Column="1" Content="Sound"  Style="{StaticResource RedButtonTrigger}" Template="{StaticResource LiveButton}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"></Button>
-            <TextBlock Grid.Column="1" Text="&#xe6ec;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="68,22,190,20.2" />
-            <Button Grid.Column="2" Content="Voice" Template="{StaticResource LiveButton}" Style="{StaticResource RedButtonTrigger}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"></Button>
-            <TextBlock Grid.Column="2" Text="&#xe64d;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="72,22,188,20.2" />
-            <Button Grid.Column="3" Content="Picture" Template="{StaticResource LiveButton}" Style="{StaticResource RedButtonTrigger}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"></Button>
-            <TextBlock Grid.Column="3" Text="&#xe6a2;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="68,22,190,20.2" />
+            <TextBlock Grid.Column="0" Text="&#xe756;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,251,20.2" />
+            <Button Grid.Column="1" Content="Problem"  Style="{StaticResource RedButtonTrigger}" Template="{StaticResource LiveButton}" FontSize="20" FontWeight="Bold" Foreground="#FFFFFF"></Button>
+            <TextBlock Grid.Column="1" Text="&#xe8b4;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,248,20.2" />
+            <ComboBox Text="Voice" Grid.Column="2" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Computer</ListBoxItem>
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Microphone</ListBoxItem>
+            </ComboBox>
+            <TextBlock Grid.Column="2" Text="&#xe64d;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,250,20.2" RenderTransformOrigin="0.115,0.533" />
+            <ComboBox Text="Video" Grid.Column="3" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Computer</ListBoxItem>
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Microphone</ListBoxItem>
+            </ComboBox>
+            <TextBlock Grid.Column="3" Text="&#xe6a2;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,248,20.2" RenderTransformOrigin="-0.186,0.527" />
         </Grid>
     </Grid>
 </Page>

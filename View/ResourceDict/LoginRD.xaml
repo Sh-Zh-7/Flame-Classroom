@@ -4,10 +4,7 @@
     <!-- For login form -->
     <ControlTemplate x:Key="BorderInput" TargetType="{x:Type TextBox}">
         <Border BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10">
-            <StackPanel>
-                <ContentPresenter Content="{TemplateBinding Text}" VerticalAlignment="Center" Margin="10, 0, 0, 0"/>
-                <TextBox BorderThickness="0" Margin="5, -8, 0, 0"></TextBox>
-            </StackPanel>
+            <TextBox BorderThickness="0" Margin="5, 0, 0, 0" VerticalAlignment="Center" Text="{TemplateBinding Text}"></TextBox>
         </Border>
     </ControlTemplate>
     <!-- For login Button -->
@@ -92,7 +89,7 @@
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="#2f2f2f"/>
-        <Setter Property="TextWrapping" Value="Wrap"/>
+        
         <Setter Property="Margin" Value="40, 0, 40, 0"/>
     </Style>
 </ResourceDictionary>
