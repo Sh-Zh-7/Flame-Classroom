@@ -51,15 +51,14 @@
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2.5*"/>
-                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Orientation="Vertical">
                 <Label Content="Description: " Style="{StaticResource FormLabel}"></Label>
-                <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text="" Margin="35,0,9.6,0" Height="93"></TextBox>
+                <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text="" Margin="35,0,35,0" Height="93"></TextBox>
             </StackPanel>
 
-            <StackPanel Grid.Column="1" Orientation="Vertical">
+            <!--<StackPanel Grid.Column="1" Orientation="Vertical">
                 <StackPanel Orientation="Vertical">
                     <Label Content="Voice divice" Margin="15, 0, 0, 0" Style="{StaticResource FormLabel}"></Label>
                     <ComboBox Width="170" Height="30" FontSize="14">
@@ -67,14 +66,8 @@
                         <ListBoxItem FontSize="15">Microphone</ListBoxItem>
                     </ComboBox>
                 </StackPanel>
-                <StackPanel Margin="0, 10, 0, 0">
-                    <Label Content="Image device" Margin="15, 0, 0, 0" Style="{StaticResource FormLabel}"></Label>
-                    <ComboBox Width="170" Height="30" FontSize="14">
-                        <ListBoxItem FontSize="15">Camera</ListBoxItem>
-                        <ListBoxItem FontSize="15">Computer Screen</ListBoxItem>
-                    </ComboBox>
-                </StackPanel>
-            </StackPanel>
+
+            </StackPanel>-->
             <!--<Rectangle Grid.ColumnSpan="2" VerticalAlignment="Bottom" Fill="#CCCCCC" Height="2" Width="380"></Rectangle>-->
         </Grid>
         <Button Grid.Row="3" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Width="250" Height="40" Content="Confirm"
