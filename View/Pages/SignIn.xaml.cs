@@ -35,5 +35,12 @@ namespace FlameClassroom.Pages
         {
             parentWindow.mainFrame.Content = parentWindow.signUpPage;
         }
+
+        private void Return_to_ID_Click(object sender, RoutedEventArgs e)
+        {
+            var newInputPage = new IPInput();
+            newInputPage.parentWindow = parentWindow;
+            parentWindow.mainFrame.Content = newInputPage;
+        }
     }
 }

@@ -28,6 +28,8 @@
         </Ellipse>
         <Label Grid.Row="0" Content="Sign In" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                FontSize="20" FontWeight="Bold" Margin="35, 0, 0, 15"></Label>
+        <Button x:Name="Return_to_ID" Grid.Row="0" Width="55" FontSize="15" Height="20" HorizontalAlignment="Right" Margin="0, 20, 30, 0" Content="return"
+                Background="Transparent" Foreground="#F26B3A" FontWeight="Bold" BorderThickness="0" Click="Return_to_ID_Click"></Button>
         <!-- Form parts -->
         <StackPanel Grid.Row="1">
             <StackPanel Height="80">
