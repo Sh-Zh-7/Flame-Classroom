@@ -18,10 +18,10 @@ namespace FlameClassroom.Pages
     /// <summary>
     /// Live.xaml 的交互逻辑
     /// </summary>
-    public partial class Live : Page
+    public partial class TeacherLive : Page
     {
         public MainWindow parentWindow { set; get; }
-        public Live()
+        public TeacherLive()
         {
             InitializeComponent();
         }

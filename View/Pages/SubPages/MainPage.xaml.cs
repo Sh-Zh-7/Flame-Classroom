@@ -36,7 +36,14 @@ namespace FlameClassroom.Pages.SubPages
 
         private void Listen_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.mainFrame.Content = parentWindow.livePage;
+            if (parentWindow.identification == "student")
+            {
+                parentWindow.mainFrame.Content = parentWindow.studentLivePage;
+            } else if (parentWindow.identification == "teacher")
+            {
+                parentWindow.mainFrame.Content = parentWindow.teacherLivePage;
+            }
+
 
         }
 

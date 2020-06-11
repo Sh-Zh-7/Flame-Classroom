@@ -75,14 +75,21 @@
     <Compile Include="Pages\IPInput.xaml.cs">
       <DependentUpon>IPInput.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Live.xaml.cs">
-      <DependentUpon>Live.xaml</DependentUpon>
+    <Compile Include="Pages\StudentLive.xaml.cs">
+      <DependentUpon>StudentLive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeacherLive.xaml.cs">
+      <DependentUpon>TeacherLive.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\IPInput.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Live.xaml">
+    <Page Include="Pages\StudentLive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TeacherLive.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -28,7 +28,8 @@ namespace FlameClassroom
         public HomePage homePage;
         public IPInput IPInputPage = new IPInput();
         // Live environment
-        public Live livePage = new Live();
+        public TeacherLive teacherLivePage = new TeacherLive();
+        public StudentLive studentLivePage = new StudentLive();
 
         // Identification
         public string identification;
@@ -41,7 +42,9 @@ namespace FlameClassroom
             signInPage.parentWindow = this;
             signUpPage.parentWindow = this;
             IPInputPage.parentWindow = this;
-            livePage.parentWindow = this;
+            teacherLivePage.parentWindow = this;
+            studentLivePage.parentWindow = this;
+            
             
             mainFrame.Content = IPInputPage;
         }
