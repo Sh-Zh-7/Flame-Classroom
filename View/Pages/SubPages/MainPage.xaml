@@ -30,7 +30,7 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            
+
             <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Center" Margin="20, 0, 0, 0">
                 <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold">School</Label>
                 <TextBlock FontSize="15" Foreground="#6E6E6E" HorizontalAlignment="Center">WHU</TextBlock>
@@ -45,17 +45,7 @@
             </StackPanel>
 
         </Grid>
-        <StackPanel Grid.Row="3">
-            <Button x:Name="listen" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
+        <Button Grid.Row="3" x:Name="listen" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
                 Content="Listen" Height="42" Width="280" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="Listen_Click"></Button>
-            <StackPanel Orientation="Horizontal" Height="40">
-                <Rectangle Fill="#DCDCDC" Width="120" Height="2" Margin="80, 0, 0, 0" VerticalAlignment="Center"></Rectangle>
-                <Label Content="or" Margin="15, 0, 15, 0" Foreground="#DCDCDC" VerticalAlignment="Center"></Label>
-                <Rectangle Fill="#DCDCDC" Width="120" Height="2" Margin="0, 0, 0, 0"></Rectangle>
-            </StackPanel>
-            <Button x:Name="createAccount" Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource BlueButtonTrigger}"
-                Content="Teach" Height="42" Width="280" Foreground="#FFFFFF" Click="CreateAccount_Click">
-            </Button>
-        </StackPanel>
     </Grid>
 </Page>

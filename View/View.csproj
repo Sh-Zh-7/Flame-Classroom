@@ -59,19 +59,14 @@
     <Compile Include="Pages\IPInput.xaml.cs">
       <DependentUpon>IPInput.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\StudentLive.xaml.cs">
-      <DependentUpon>StudentLive.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\TeacherLive.xaml.cs">
-      <DependentUpon>TeacherLive.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\StudentWnd.xaml.cs">
-      <DependentUpon>StudentWnd.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\TeacherWnd.xaml.cs">
-      <DependentUpon>TeacherWnd.xaml</DependentUpon>
+    <Compile Include="Pages\Live.xaml.cs">
+      <DependentUpon>Live.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\IPInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Live.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,10 +97,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\StudentLive.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\SubPages\AboutUs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,10 +113,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\TeacherLive.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ResourceDict\HomePageRD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,14 +122,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResourceDict\LoginRD.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\StudentWnd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\TeacherWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

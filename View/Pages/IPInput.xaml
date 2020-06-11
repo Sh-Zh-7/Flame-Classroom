@@ -19,13 +19,19 @@
             </Rectangle.Effect>
         </Rectangle>
 
+        <Ellipse Grid.Row="0" HorizontalAlignment="Center" Height="132" Margin="0, -250, 0, 0" Width="132">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/FlameClassroom;component/Images/icon.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+
         <Grid Grid.Row="0" Height="200" VerticalAlignment="Top">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" Margin="0, 40, 0, 0" HorizontalAlignment="Center" Content="Choose your identification!" Foreground="#000000"/>
+            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" Margin="0, 60, 0, 0" HorizontalAlignment="Center" Content="Choose your identification!" Foreground="#000000"/>
 
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -44,13 +50,14 @@
                 <RowDefinition Height="0.8*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.3*"/>
             </Grid.RowDefinitions>
             
-            <Rectangle Height="3" Width="350" Fill="#CCCCCC" VerticalAlignment="Top"/>
+            <Rectangle Height="1" Width="350" Fill="#AAAAAA" VerticalAlignment="Top"/>
             <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your teacher's IP:" Foreground="#000000"/>
             <TextBox Grid.Row="1" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
             <Button Grid.Row="2" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
-                Foreground="#FFFFFF" FontSize="20" Height="40" Click="Button_Click"/>
+                Foreground="#FFFFFF" FontSize="20" Height="40" Click="Button_Click" />
         </Grid>
 
         <Grid x:Name="teacherSubmit" Grid.Row="1" Visibility="Hidden">
@@ -58,9 +65,10 @@
                 <RowDefinition Height="0.8*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.3*"/>
             </Grid.RowDefinitions>
 
-            <Rectangle Height="3" Width="350" Fill="#CCCCCC" VerticalAlignment="Top"/>
+            <Rectangle Height="1" Width="350" Fill="#AAAAAA" VerticalAlignment="Top"/>
             <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your IP:" Foreground="#000000"/>
             <TextBox Grid.Row="1" Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
             <Button Grid.Row="2" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"

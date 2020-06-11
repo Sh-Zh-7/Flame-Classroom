@@ -27,6 +27,8 @@ namespace FlameClassroom
         public SignUp signUpPage = new SignUp();
         public HomePage homePage = new HomePage();
         public IPInput IPInputPage = new IPInput();
+        // Live environment
+        public Live livePage = new Live();
 
         public MainWindow()
         {
