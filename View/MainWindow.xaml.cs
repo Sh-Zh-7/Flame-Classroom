@@ -1,4 +1,5 @@
 ﻿using FlameClassroom.Pages;
+using FlameClassroom.Pages.SubPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,17 +22,25 @@ namespace FlameClassroom
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Pages
         public SignIn signInPage = new SignIn();
         public SignUp signUpPage = new SignUp();
         public HomePage homePage = new HomePage();
+        public IPInput IPInputPage = new IPInput();
+
         public MainWindow()
         {
             InitializeComponent();
 
+            // Bind parent window
             signInPage.parentWindow = this;
             signUpPage.parentWindow = this;
+            homePage.parentWindow = this;
+            IPInputPage.parentWindow = this;
 
-            mainFrame.Content = signInPage;
+            homePage.SetParentWnd();
+            
+            mainFrame.Content = IPInputPage;
         }
     }
 }

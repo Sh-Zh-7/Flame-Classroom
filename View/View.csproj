@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\IPInput.xaml.cs">
+      <DependentUpon>IPInput.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\StudentLive.xaml.cs">
       <DependentUpon>StudentLive.xaml</DependentUpon>
     </Compile>
@@ -68,6 +71,10 @@
     <Compile Include="Windows\TeacherWnd.xaml.cs">
       <DependentUpon>TeacherWnd.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\IPInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SignIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

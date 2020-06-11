@@ -20,6 +20,7 @@ namespace FlameClassroom.Pages.SubPages
     /// </summary>
     public partial class AboutUs : Page
     {
+        public MainWindow parentWindow { set; get; }
         public AboutUs()
         {
             InitializeComponent();

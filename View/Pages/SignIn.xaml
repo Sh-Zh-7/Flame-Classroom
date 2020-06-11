@@ -31,11 +31,11 @@
         <!-- Form parts -->
         <StackPanel Grid.Row="1">
             <StackPanel Height="80">
-                <Label Content="Username: " Style="{StaticResource FormLabel}"></Label>
+                <Label Content="username: " Style="{StaticResource FormLabel}"></Label>
                 <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
             </StackPanel>
             <StackPanel>
-                <Label Content="Password: " Style="{StaticResource FormLabel}"></Label>
+                <Label Content="password: " Style="{StaticResource FormLabel}"></Label>
                 <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">

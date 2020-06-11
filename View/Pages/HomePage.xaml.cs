@@ -26,6 +26,8 @@ namespace FlameClassroom.Pages
         public AboutUs aboutUs = new AboutUs();
         public Others others = new Others();
 
+        public MainWindow parentWindow { set; get; }
+
         public HomePage()
         {
             InitializeComponent();
@@ -35,8 +37,17 @@ namespace FlameClassroom.Pages
             HomeworkLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(HomeworkLBI_MouseLeftButtonDown), true);
             AboutUsLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(AboutUsLBI_MouseLeftButtonDown), true);
             OthersLBI.AddHandler(MouseLeftButtonDownEvent, new MouseButtonEventHandler(OthersLBI_MouseLeftButtonDown), true);
+
             // Main page by default
             frame.Content = mainPage;
+        }
+
+        public void SetParentWnd()
+        {
+            aboutUs.parentWindow = parentWindow;
+            mainPage.parentWindow = parentWindow;
+            others.parentWindow = parentWindow;
+            userInfo.parentWindow = parentWindow;
         }
 
         private void MainPageLBI_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

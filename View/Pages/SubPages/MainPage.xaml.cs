@@ -21,6 +21,7 @@ namespace FlameClassroom.Pages.SubPages
     /// </summary>
     public partial class MainPage : Page
     {
+        public MainWindow parentWindow { set; get; }
         public MainPage()
         {
             InitializeComponent();
@@ -36,6 +37,11 @@ namespace FlameClassroom.Pages.SubPages
         {
             TeacherWnd teacherWnd = new TeacherWnd();
             teacherWnd.Show();
+        }
+
+        private void Return_to_SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            parentWindow.mainFrame.Content = parentWindow.signInPage;
         }
     }
 }
