@@ -21,6 +21,7 @@ namespace FlameClassroom.Pages
     public partial class TeacherLive : Page
     {
         public MainWindow parentWindow { set; get; }
+        public string liveCondition = "stop";
         public TeacherLive()
         {
             InitializeComponent();
@@ -34,6 +35,23 @@ namespace FlameClassroom.Pages
         private void End_Click(object sender, RoutedEventArgs e)
         {
             parentWindow.mainFrame.Content = parentWindow.homePage;
+        }
+
+        private void ControlBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (liveCondition == "stop")
+            {
+                ControlBtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/start.jpg"));
+                ControlBtnContent.Text = "Start";
+                liveCondition = "start";
+            }
+            else if (liveCondition == "start")
+            {
+                ControlBtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/stop.jpg"));
+                ControlBtnContent.Text = "Stop";
+                liveCondition = "stop";
+            }
+
         }
     }
 }

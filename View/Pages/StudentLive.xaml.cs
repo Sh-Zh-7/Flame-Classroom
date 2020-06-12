@@ -20,6 +20,7 @@ namespace FlameClassroom.Pages
     /// </summary>
     public partial class StudentLive : Page
     {
+        public string soundCondition = "stop";
         public MainWindow parentWindow { get; set; }
         public StudentLive()
         {
@@ -29,6 +30,22 @@ namespace FlameClassroom.Pages
         private void End_Click(object sender, RoutedEventArgs e)
         {
             parentWindow.mainFrame.Content = parentWindow.homePage;
+        }
+
+        private void ControlBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (soundCondition == "stop")
+            {
+                ControlBtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/start.jpg"));
+                ControlBtnContent.Text = "Start";
+                soundCondition = "start";
+            } else if (soundCondition == "start")
+            {
+                ControlBtnImage.Source = new BitmapImage(new Uri("pack://application:,,,/Images/stop.jpg"));
+                ControlBtnContent.Text = "Stop";
+                soundCondition = "stop";
+            }
+
         }
     }
 }

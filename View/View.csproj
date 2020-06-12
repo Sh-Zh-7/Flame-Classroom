@@ -250,6 +250,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\repairing.png" />
+    <Content Include="Images\start.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\stop.jpg" />
     <Content Include="Images\student.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
