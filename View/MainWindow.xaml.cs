@@ -35,8 +35,8 @@ namespace FlameClassroom
             IPInputPage.parentWindow = this;
             teacherLivePage.parentWindow = this;
 
-            teacherLivePage.AddVoice(new List<string> { "Fuck", "Fuck2" });
-            teacherLivePage.AddVideo(new List<string> { "Damn", "Damn2" });
+            teacherLivePage.AddVoice(App.ffmpegthread.AudioList);
+            teacherLivePage.AddVideo(App.ffmpegthread.VideoList);
             studentLivePage.parentWindow = this;
 
             //var page = new JudgeCount(new List<int> { 4, 5, 6});
