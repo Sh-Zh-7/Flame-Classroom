@@ -34,13 +34,13 @@
                     </Grid.ColumnDefinitions>
  
                     <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <CheckBox Margin="0, 15, 0, 0"></CheckBox>
+                        <CheckBox x:Name="BoxA" Margin="0, 15, 0, 0"></CheckBox>
                         <Label Content="A" FontSize="25"></Label>
                     </StackPanel>
 
 
                     <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <CheckBox Margin="0, 15, 0, 0"></CheckBox>
+                        <CheckBox x:Name="BoxB" Margin="0, 15, 0, 0"></CheckBox>
                         <Label Content="B" FontSize="25"></Label>
                     </StackPanel>
                 </Grid>
@@ -51,12 +51,12 @@
                     </Grid.ColumnDefinitions>
                     
                     <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <CheckBox Margin="0, 15, 0, 0"></CheckBox>
+                        <CheckBox x:Name="BoxC" Margin="0, 15, 0, 0"></CheckBox>
                         <Label Content="C" FontSize="25"></Label>
                     </StackPanel>
 
                     <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <CheckBox Margin="0, 15, 0, 0"></CheckBox>
+                        <CheckBox x:Name="BoxD" Margin="0, 15, 0, 0"></CheckBox>
                         <Label Content="D" FontSize="25"></Label>
                     </StackPanel>
                 </Grid>
@@ -66,7 +66,7 @@
 
             <Rectangle Grid.Row="1" Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Bottom"></Rectangle>
             <Button Grid.Row="2" x:Name="sign" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
-                Content="Comfirm" Height="34" Width="300" Foreground="#FFFFFF"></Button>
+                Content="Comfirm" Height="34" Width="300" Foreground="#FFFFFF" Click="sign_Click"></Button>
         </Grid>
     </Grid>
 </Window>

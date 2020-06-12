@@ -51,10 +51,12 @@ namespace FlameClassroom.Pages.SubPages
                 //TODO:messagebox
                 App.student.ChangeInfo(UserInfoSchool.Text, UserInfoID.Text, UserInfoName.Text, UserInfoDescription.Text);
                 this.parentWindow.homePage.mainPage.ChangedInfo(UserInfoName.Text, UserInfoDescription.Text, UserInfoSchool.Text, UserInfoID.Text);
+                this.parentWindow.homePage.frame.Content = this.parentWindow.homePage.mainPage;
             }
             else if(parentWindow.identification == "teacher")
             {
                 this.parentWindow.homePage.mainPage.ChangedInfo(UserInfoName.Text, UserInfoDescription.Text, UserInfoSchool.Text, UserInfoID.Text);
+                this.parentWindow.homePage.frame.Content = this.parentWindow.homePage.mainPage;
             }
         }
     }

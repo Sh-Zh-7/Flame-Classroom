@@ -34,10 +34,9 @@ namespace FlameClassroom.UserControls
 
         public void SetValues(List<int> list)
         {
-            SeriesCollection[0] = new ColumnSeries
-            {
-                Values = new ChartValues<int> { list[0], list[1], list[2] }
-            };
+            SeriesCollection[0].Values[0] = list[0];
+            SeriesCollection[0].Values[1] = list[1];
+            SeriesCollection[0].Values[2] = list[2];
         }
 
         public SeriesCollection SeriesCollection { get; set; }

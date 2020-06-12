@@ -23,5 +23,18 @@ namespace FlameClassroom.Windows
         {
             InitializeComponent();
         }
+
+        private void sign_Click(object sender, RoutedEventArgs e)
+        {
+            if(BoxT.IsChecked==true)
+            {
+                App.student.TFsend("true");
+            }
+            else if(BoxF.IsChecked==true)
+            {
+                App.student.TFsend("false");
+            }
+            this.Close();
+        }
     }
 }

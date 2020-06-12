@@ -26,6 +26,7 @@ namespace FlameClassroom.Windows
 
         private void Sign_Click(object sender, RoutedEventArgs e)
         {
+            App.student.RegisterSend();
             this.Close();
         }
     }

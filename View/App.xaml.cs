@@ -17,7 +17,12 @@ namespace FlameClassroom
     {
         internal static StudentSide student;
         internal static TeacherSide teacher;
-        internal static FFmpegThread ffmpegthread=new FFmpegThread();
-        
+        internal static FFmpegThread ffmpegthread = new FFmpegThread();
+
+        ~App()
+        {
+            ffmpegthread.End();
+        }
+
     }
 }

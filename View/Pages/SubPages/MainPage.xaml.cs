@@ -53,6 +53,7 @@ namespace FlameClassroom.Pages.SubPages
             if (parentWindow.identification == "student")
             {
                 parentWindow.mainFrame.Content = parentWindow.studentLivePage;
+                parentWindow.studentLivePage.Init();
             } else if (parentWindow.identification == "teacher")
             {
                 parentWindow.mainFrame.Content = parentWindow.teacherLivePage;

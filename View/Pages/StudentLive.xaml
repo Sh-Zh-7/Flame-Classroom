@@ -36,11 +36,11 @@
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
 
-                    <ffme:MediaElement Grid.Row="0" x:Name="Media" Background="Gray" LoadedBehavior="Play" UnloadedBehavior="Manual" />
+                    <ffme:MediaElement Grid.Row="0" x:Name="Media" Background="Gray" />
                     <Button x:Name="ControlBtn" Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource WhiteButton}" Width="250" Click="ControlBtn_Click">
                         <WrapPanel Width="248">
-                            <Image x:Name="ControlBtnImage" Source="pack://application:,,,/Images/stop.jpg"/>
-                            <TextBlock x:Name="ControlBtnContent" TextWrapping="Wrap" Text="Stop" Width="125" FontSize="22" VerticalAlignment="Center" Padding="40,0,0,0"/>
+                            <Image x:Name="ControlBtnImage" Source="pack://application:,,,/Images/start.jpg"/>
+                            <TextBlock x:Name="ControlBtnContent" TextWrapping="Wrap" Text="Start" Width="125" FontSize="22" VerticalAlignment="Center" Padding="40,0,0,0"/>
                         </WrapPanel>
                     </Button>
                 </Grid>

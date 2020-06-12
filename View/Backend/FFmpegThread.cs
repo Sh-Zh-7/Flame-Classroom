@@ -51,8 +51,8 @@ namespace FlameClassroom.Backend
             get => _LibraryDirectory;
         }
 
-        private string _VideoDevice;
-        private string _AudioDevice;
+        public string VideoDevice;
+        public string AudioDevice;
         private string _VideoDecoder;
 
         private string _Argument = "";
@@ -127,6 +127,8 @@ namespace FlameClassroom.Backend
             {
                 _AudioList.Add(item.Groups[1].ToString());
             }
+            VideoDevice = _VideoList[0];
+            AudioDevice = _AudioList[0];
         }
 
         public void SetFixedParameters()
@@ -162,6 +164,12 @@ namespace FlameClassroom.Backend
             _Argument += "rtmp://" + IPAddress + "/live/Fire-Classroom";
             _Address = "rtmp://" + IPAddress + "/live/Fire-Classroom";
         }
+
+        public void SetArguments(string IPAddress)
+        {
+            SetArguments(VideoDevice, AudioDevice, "400k", "20", "libx264", IPAddress);
+        }
+
         public void Execute()
         {
             _ffmpegProcess = new Process();
@@ -174,7 +182,10 @@ namespace FlameClassroom.Backend
 
         public void End()
         {
-            _ffmpegProcess.Kill();
+            if(_ffmpegProcess!=null)
+            {
+                _ffmpegProcess.Kill();
+            }
         }
 
         public void test()

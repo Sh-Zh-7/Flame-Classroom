@@ -116,15 +116,15 @@ namespace FlameClassroom.Backend
             }
             else if (StrArr[0] == "Registering")
             {
-                //ChangeRegi();
+                ChangeRegi(StrArr, CommuConnection);
             }
             else if (StrArr[0] == "TF")
             {
-
+                ChangeTF(StrArr, CommuConnection);
             }
             else if (StrArr[0] == "CHOICE")
             {
-
+                ChangeChoice(StrArr, CommuConnection);
             }
         }
 
@@ -297,6 +297,11 @@ namespace FlameClassroom.Backend
             {
                 AccountList.Clear();
             }
+            else if (File.ReadAllText(InfoPath) == "{}")
+            {
+                AccountList.Clear();
+
+            }
             else
             {
                 AccountList = JsonConvert.DeserializeObject<Dictionary<string, Account>>(File.ReadAllText(InfoPath));
@@ -312,6 +317,7 @@ namespace FlameClassroom.Backend
         ~TeacherSide()
         {
             RenewStudentInfo();
+            ListenSocket.Close();
         }
     }
 
