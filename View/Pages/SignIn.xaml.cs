@@ -31,5 +31,15 @@ namespace FlameClassroom.Pages
             newInputPage.parentWindow = parentWindow;
             parentWindow.mainFrame.Content = newInputPage;
         }
+
+        private void ShowAccountError()
+        {
+            warning.Content = "Account doesn't exist!";
+        }
+
+        private void ShowPasswordError()
+        {
+            warning.Content = "Password Error!";
+        }
     }
 }

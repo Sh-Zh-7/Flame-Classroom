@@ -44,6 +44,7 @@
                 <Border BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Margin="40, 0, 40, 0">
                     <PasswordBox BorderThickness="0" Margin="5, 0, 0, 0" Style="{StaticResource PasswordForm}"></PasswordBox>
                 </Border>
+                <Label x:Name="warning" Foreground="#F26B3A" Margin="40, 0, 0, 0" FontSize="13"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal"/>
         </StackPanel>
