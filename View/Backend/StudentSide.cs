@@ -17,6 +17,7 @@ namespace FlameClassroom.Backend
         public Account account = null;
 
         public string TeatherIP { set; get; }
+        public string TeatherName { set; get; }
         public StudentSide(string IPstring)
         {
             TeatherIP = IPstring;
@@ -80,12 +81,16 @@ namespace FlameClassroom.Backend
             //TODO:在页面中渲染
         }
 
+        public void RegisterSend()
+        {
+            ConnectSocket.Send(Encoding.UTF8.GetBytes("Registering"));
+        }
         public void TFsend(string choice)
         {
             ConnectSocket.Send(Encoding.UTF8.GetBytes("TF" + " " + choice));
         }
 
-        public void Choice(string choice)
+        public void ChoiceSend(string choice)
         {
             ConnectSocket.Send(Encoding.UTF8.GetBytes("CHOICE" + " " + choice));
         }
@@ -111,6 +116,7 @@ namespace FlameClassroom.Backend
             else if (StrArr[0] == "Login_Success")
             {
                 account = JsonConvert.DeserializeObject<Account>(StrArr[1]);
+                TeatherName = StrArr[2];
                 LoginSuccess(new EventArgs());
             }
             else if (StrArr[0] == "Register")

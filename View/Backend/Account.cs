@@ -36,11 +36,16 @@ namespace FlameClassroom.Backend
         public string Description { set; get; }
 
         public bool Init { set; get; }
+
+        public Register_enum register_Enum;
+        public TF_enum tF_Enum;
+        public Choice_enum choice_Enum;
         public Account(string UserName, string Password)
         {
             this.UserName = UserName;
             this.Password = Password;
             this.Init = true;
+            this.Name = "null";
         }
         [JsonConstructor]
         public Account(string UserName, string Password, string School, string ID, string Name, string Description, bool Init)
@@ -61,5 +66,18 @@ namespace FlameClassroom.Backend
             this.Description = Description;
             this.Init = false;
         }
+    }
+
+    public enum Register_enum
+    {
+        register, unregister
+    };
+    public enum TF_enum
+    {
+        T, F, ToChoose
+    };
+    public enum Choice_enum
+    {
+        A, B, C, D, ToChoose
     }
 }

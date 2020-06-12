@@ -42,6 +42,9 @@ namespace FlameClassroom.Pages.SubPages
                 ImageBrush myImageBrush = new ImageBrush();
                 myImageBrush.ImageSource = new BitmapImage(new Uri("Images/teacher.png", UriKind.Relative));
                 avatar.Fill = myImageBrush;
+                MainPageName1.Content = App.teacher.Name;
+                MainPageSchool.Text = "WHU";
+                MainPageName.Text = App.teacher.Name;
             }
         }
 
@@ -53,6 +56,7 @@ namespace FlameClassroom.Pages.SubPages
             } else if (parentWindow.identification == "teacher")
             {
                 parentWindow.mainFrame.Content = parentWindow.teacherLivePage;
+                parentWindow.teacherLivePage.Init();
             }
 
 

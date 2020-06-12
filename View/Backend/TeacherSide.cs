@@ -21,6 +21,8 @@ namespace FlameClassroom.Backend
 
         public Dictionary<string, Account> AccountList = new Dictionary<string, Account>();
 
+
+
         public TeacherSide(string IPstring)
         {
             TeatherIP = IPstring;
@@ -112,6 +114,18 @@ namespace FlameClassroom.Backend
             {
                 ChangeInfo(StrArr, CommuConnection);
             }
+            else if (StrArr[0] == "Registering")
+            {
+                ChangeRegi();
+            }
+            else if (StrArr[0] == "TF")
+            {
+
+            }
+            else if (StrArr[0] == "CHOICE")
+            {
+
+            }
         }
 
         public void CreateAcount(string[] StrArr, Socket CommuConnection)
@@ -143,11 +157,12 @@ namespace FlameClassroom.Backend
             }
             else
             {
-                CommuConnection.Send(Encoding.UTF8.GetBytes("Login_Success" + " " + JsonConvert.SerializeObject(AccountList[UserName])));
+                RenewStudentList(new RenewEventArgs(AccountList));
+                CommuConnection.Send(Encoding.UTF8.GetBytes("Login_Success" + " " + JsonConvert.SerializeObject(AccountList[UserName]) + " " + Name));
                 ConnectionList[CommuConnection.RemoteEndPoint.ToString()].Login = true;
                 ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account = AccountList[UserName];
             }
-        }//TODO:添加对jsonconvert程序集的引用
+        }
 
         public void ChangeInfo(string[] StrArr, Socket CommuConnection)
         {
@@ -156,6 +171,46 @@ namespace FlameClassroom.Backend
             string Name = StrArr[3];
             string Description = StrArr[4];
             ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.ChangeInfo(School, ID, Name, Description);
+            RenewStudentList(new RenewEventArgs(AccountList));
+        }
+
+        public void ChangeRegi(string[] StrArr, Socket CommuConnection)
+        {
+            ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.register_Enum = Register_enum.register;
+            RenewRegister(new RenewEventArgs(AccountList));
+        }
+        public void ChangeTF(string[] StrArr, Socket CommuConnection)
+        {
+            if (StrArr[1] == "true")
+            {
+                ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.tF_Enum = TF_enum.T;
+            }
+            else if (StrArr[1] == "false")
+            {
+                ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.tF_Enum = TF_enum.F;
+            }
+            RenewTF(new RenewEventArgs(AccountList));
+
+        }
+        public void ChangeChoice(string[] StrArr, Socket CommuConnection)
+        {
+            if (StrArr[1] == "A")
+            {
+                ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.choice_Enum = Choice_enum.A;
+            }
+            else if (StrArr[1] == "B")
+            {
+                ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.choice_Enum = Choice_enum.B;
+            }
+            else if (StrArr[1] == "C")
+            {
+                ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.choice_Enum = Choice_enum.C;
+            }
+            else if (StrArr[1] == "D")
+            {
+                ConnectionList[CommuConnection.RemoteEndPoint.ToString()].account.choice_Enum = Choice_enum.D;
+            }
+            RenewChoice(new RenewEventArgs(AccountList));
         }
 
         public void PublishRegister()
@@ -163,6 +218,7 @@ namespace FlameClassroom.Backend
             foreach (ConnectionState item in ConnectionList.Values)
             {
                 item.Connection.Send(Encoding.UTF8.GetBytes("Register"));
+                item.account.register_Enum = Register_enum.unregister;
             }
         }
 
@@ -171,6 +227,7 @@ namespace FlameClassroom.Backend
             foreach (ConnectionState item in ConnectionList.Values)
             {
                 item.Connection.Send(Encoding.UTF8.GetBytes("TF"));
+                item.account.tF_Enum = TF_enum.ToChoose;
             }
         }
 
@@ -179,6 +236,47 @@ namespace FlameClassroom.Backend
             foreach (ConnectionState item in ConnectionList.Values)
             {
                 item.Connection.Send(Encoding.UTF8.GetBytes("CHOICE"));
+                item.account.choice_Enum = Choice_enum.ToChoose;
+            }
+        }
+
+        public event EventHandler<RenewEventArgs> RenewStudentListEvent;
+
+        public void RenewStudentList(RenewEventArgs e)
+        {
+            if (RenewStudentListEvent != null)
+            {
+                RenewStudentListEvent(this, e);
+            }
+        }
+
+        public event EventHandler<RenewEventArgs> RenewRegisterEvent;
+
+        public void RenewRegister(RenewEventArgs e)
+        {
+            if (RenewRegisterEvent != null)
+            {
+                RenewRegisterEvent(this, e);
+            }
+        }
+
+        public event EventHandler<RenewEventArgs> RenewTFEvent;
+
+        public void RenewTF(RenewEventArgs e)
+        {
+            if (RenewTFEvent != null)
+            {
+                RenewTFEvent(this, e);
+            }
+        }
+
+        public event EventHandler<RenewEventArgs> RenewChoiceEvent;
+
+        public void RenewChoice(RenewEventArgs e)
+        {
+            if (RenewChoiceEvent != null)
+            {
+                RenewChoiceEvent(this, e);
             }
         }
 
@@ -216,4 +314,16 @@ namespace FlameClassroom.Backend
             RenewStudentInfo();
         }
     }
+
+    class RenewEventArgs : EventArgs
+    {
+        public Dictionary<string, Account> AccountList = new Dictionary<string, Account>();
+
+        public RenewEventArgs(Dictionary<string, Account> AccountList)
+        {
+            this.AccountList = AccountList;
+        }
+    }
+
+
 }
