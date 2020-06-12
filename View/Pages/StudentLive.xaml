@@ -30,10 +30,26 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="1.3*"/>
                 </Grid.ColumnDefinitions>
-                <ffme:MediaElement Grid.Column="0" x:Name="Media" Background="Gray" LoadedBehavior="Play" UnloadedBehavior="Manual" />
 
-                <ListBox Grid.Column="1" Background="#FFF2F2F2">
-                    <ListBoxItem Height="50" BorderBrush="#FFFFFF" BorderThickness="5" Background="#000000"></ListBoxItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <ffme:MediaElement Grid.Row="0" x:Name="Media" Background="Gray" LoadedBehavior="Play" UnloadedBehavior="Manual" />
+                    <Button x:Name="ControlBtn" Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource WhiteButton}" Width="250" Click="ControlBtn_Click">
+                        <WrapPanel Width="248">
+                            <Image x:Name="ControlBtnImage" Source="pack://application:,,,/Images/stop.jpg"/>
+                            <TextBlock x:Name="ControlBtnContent" TextWrapping="Wrap" Text="Stop" Width="125" FontSize="22" VerticalAlignment="Center" Padding="40,0,0,0"/>
+                        </WrapPanel>
+                    </Button>
+                </Grid>
+
+                <Image Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Source="pack://application:,,,/Images/teacher.png" Height="40" Width="40" Margin="6, 0, 0, 0"/>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="teacherName" Width="100" Height="30" FontSize="20" FontWeight="Bold"  Text="123" Margin="70,8"/>
+
+                <ListBox x:Name="personList" Grid.Column="1" Margin="0, 40, 0, 0" ItemTemplate="{StaticResource itemTemplate}">
                 </ListBox>
             </Grid>
 

@@ -1,5 +1,7 @@
 ﻿using FlameClassroom.Pages;
 using System.Windows;
+using Unosquare.FFME;
+using System.IO;
 
 namespace FlameClassroom
 {
@@ -32,6 +34,9 @@ namespace FlameClassroom
             studentLivePage.parentWindow = this;
 
             mainFrame.Content = IPInputPage;
+
+            Library.FFmpegDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin";
+            Library.LoadFFmpeg();
         }
     }
 }
