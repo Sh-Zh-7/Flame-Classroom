@@ -33,13 +33,13 @@
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="ID: " Style="{StaticResource FormLabel}"></Label>
                     <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
-                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="25" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="Name: " Style="{StaticResource FormLabel}"></Label>
                     <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
-                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="25" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
                     </Border>
                 </StackPanel>
             </StackPanel>
