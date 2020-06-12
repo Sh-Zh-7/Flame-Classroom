@@ -31,5 +31,10 @@ namespace FlameClassroom.Pages
         {
             parentWindow.mainFrame.Content = parentWindow.signInPage;
         }
+
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            App.student.CreatAccount(SignupUserName.Text,SignupUserName.Text);
+        }
     }
 }

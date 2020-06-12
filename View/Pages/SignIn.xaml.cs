@@ -35,6 +35,7 @@ namespace FlameClassroom.Pages
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
             parentWindow.mainFrame.Content = parentWindow.signUpPage;
+ 
         }
 
         private void Return_to_ID_Click(object sender, RoutedEventArgs e)

@@ -1,10 +1,8 @@
-﻿<Page x:Class="FlameClassroom.Pages.SignIn"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      mc:Ignorable="d" d:DesignWidth="800"
-      Title="Student" Height="530.122">
+﻿<Page x:Class="FlameClassroom.Pages.SignIn" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignWidth="800" Title="Student" Height="530.122">
 
     <!-- Body -->
     <Grid Height="480" Width="400">
@@ -26,38 +24,36 @@
                 <ImageBrush ImageSource="/FlameClassroom;component/Images/icon.png"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Label Grid.Row="0" Content="Sign In" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-               FontSize="20" FontWeight="Bold" Margin="35, 0, 0, 15"></Label>
-        <Button x:Name="Return_to_ID" Grid.Row="0" Width="55" FontSize="15" Height="20" HorizontalAlignment="Right" Margin="0, 20, 30, 0" Content="return"
-                Background="Transparent" Foreground="#F26B3A" FontWeight="Bold" BorderThickness="0" Click="Return_to_ID_Click"></Button>
+        <Label Grid.Row="0" Content="Sign In" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold" Margin="35, 0, 0, 15"></Label>
+        <Button x:Name="Return_to_ID" Grid.Row="0" Width="55" FontSize="15" Height="20" HorizontalAlignment="Right" Margin="0, 20, 30, 0" Content="return" Background="Transparent" Foreground="#F26B3A" FontWeight="Bold" BorderThickness="0" Click="Return_to_ID_Click"></Button>
         <!-- Form parts -->
         <StackPanel Grid.Row="1">
             <StackPanel Height="80">
                 <Label Content="username: " Style="{StaticResource FormLabel}"></Label>
-                <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
+                <TextBox x:Name="LoginUserName" Text=""></TextBox>
+                <!--<TextBox Template="{StaticResource BorderInput}" Style="{StaticResource Form}" Text=""></TextBox>-->
             </StackPanel>
             <StackPanel>
                 <Label Content="password: " Style="{StaticResource FormLabel}"></Label>
-                <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
+                <TextBox x:Name="LoginPassword" Text=""></TextBox>
+                <!--<TextBox Template="{StaticResource BorderInput}" Style="{StaticResource Form}" Text=""></TextBox>-->
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <CheckBox Margin="40, 15, 0, 0" BorderBrush="#F15A22"></CheckBox>
-                <Label Content="Keep me signed in" Margin="0, 8, 0, 0"  Foreground="#F15A22" FontSize="13"></Label>
+                <Label Content="Keep me signed in" Margin="0, 8, 0, 0" Foreground="#F15A22" FontSize="13"></Label>
             </StackPanel>
         </StackPanel>
         <!-- Buttons -->
         <StackPanel Grid.Row="2">
-            <Button x:Name="signIn" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
-                Content="Sign in" Height="42" Width="321" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="SignIn_Click"></Button>
+            <Button x:Name="signIn" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Content="Sign in" Height="42" Width="321" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="SignIn_Click"></Button>
             <StackPanel Orientation="Horizontal" Height="40">
                 <Rectangle Fill="#DCDCDC" Width="130" Height="2" Margin="40, 0, 0, 0" VerticalAlignment="Center"></Rectangle>
                 <Label Content="or" Margin="15, 0, 15, 0" Foreground="#DCDCDC" VerticalAlignment="Center"></Label>
                 <Rectangle Fill="#DCDCDC" Width="130" Height="2" Margin="0, 0, 0, 0"></Rectangle>
             </StackPanel>
-            <Button x:Name="createAccount" Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource BlueButtonTrigger}"
-                Content="Create an account" Height="42" Width="321" Foreground="#FFFFFF" Click="CreateAccount_Click">
+            <Button x:Name="createAccount" Grid.Row="2" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource BlueButtonTrigger}" Content="Create an account" Height="42" Width="321" Foreground="#FFFFFF" Click="CreateAccount_Click">
             </Button>
-            <Ellipse Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 15, 0, 0"  Width="45">
+            <Ellipse Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 15, 0, 0" Width="45">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/FlameClassroom;component/Images/octocat.png"/>
                 </Ellipse.Fill>

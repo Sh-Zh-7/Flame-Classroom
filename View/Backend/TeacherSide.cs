@@ -29,7 +29,6 @@ namespace FlameClassroom.Backend
             Thread WatchThread = new Thread(WatchConnection);
             WatchThread.IsBackground = true;
             WatchThread.Start();
-            WatchConnection();
             InitStudentInfo();
             //Console.WriteLine("Start watch");
             //Console.WriteLine("-----");
@@ -108,7 +107,6 @@ namespace FlameClassroom.Backend
             {
                 ChangeInfo(StrArr, CommuConnection);
             }
-
         }
 
         public void CreateAcount(string[] StrArr, Socket CommuConnection)
@@ -123,6 +121,16 @@ namespace FlameClassroom.Backend
             {
                 CommuConnection.Send(Encoding.UTF8.GetBytes("CreateAcount_Success"));
                 AccountList.Add(UserName, new Account(UserName, Password));
+                CreateAcountEventHandler(new EventArgs());
+            }
+        }
+
+        public event EventHandler CreateAcountEvent;
+        public void CreateAcountEventHandler(EventArgs e)
+        {
+            if (CreateAcountEvent != null)
+            {
+                CreateAcountEvent(this, e);
             }
         }
 
@@ -163,6 +171,16 @@ namespace FlameClassroom.Backend
             }
         }
 
+        public void PublishTFQuestion()
+        {
+
+        }
+
+        public void PublishChoiceQuestion()
+        {
+
+        }
+
         public void InitStudentInfo()
         {
             string InfoPath = Directory.GetCurrentDirectory() + @"\StudentInfo.json";
@@ -170,6 +188,10 @@ namespace FlameClassroom.Backend
             {
                 FileStream fs = new FileStream(InfoPath, FileMode.Create, FileAccess.ReadWrite);
                 fs.Close();
+                AccountList.Clear();
+            }
+            else if (File.ReadAllText(InfoPath) == "null")
+            {
                 AccountList.Clear();
             }
             else
@@ -182,6 +204,11 @@ namespace FlameClassroom.Backend
         {
             string InfoPath = Directory.GetCurrentDirectory() + @"\StudentInfo.json";
             File.WriteAllText(InfoPath, JsonConvert.SerializeObject(AccountList));
+        }
+
+        ~TeacherSide()
+        {
+            RenewStudentInfo();
         }
     }
 }

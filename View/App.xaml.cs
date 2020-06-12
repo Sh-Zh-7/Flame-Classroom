@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using FlameClassroom.Backend;
 
 namespace FlameClassroom
 {
@@ -13,5 +14,7 @@ namespace FlameClassroom
     /// </summary>
     public partial class App : Application
     {
+        internal static StudentSide student;
+        internal static TeacherSide teacher;
     }
 }

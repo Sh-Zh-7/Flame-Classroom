@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlameClassroom.Backend;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FlameClassroom;
 
 namespace FlameClassroom.Pages
 {
@@ -31,13 +33,15 @@ namespace FlameClassroom.Pages
         {
             if (parentWindow.identification == "student")
             {
+                App.student = new StudentSide(StudentIpInput.Text);
                 parentWindow.mainFrame.Content = parentWindow.signInPage;
-            } else if (parentWindow.identification == "teacher")
+            }
+            else if (parentWindow.identification == "teacher")
             {
+                App.teacher = new TeacherSide(TeacherIpInput.Text);
                 parentWindow.homePage = new HomePage(parentWindow);
                 parentWindow.mainFrame.Content = parentWindow.homePage;
             }
-
         }
 
         private void TeacherBtn_Click(object sender, RoutedEventArgs e)
@@ -54,6 +58,7 @@ namespace FlameClassroom.Pages
             parentWindow.identification = "student";
             teacherSubmit.Visibility = Visibility.Hidden;
             studentSubmit.Visibility = Visibility.Visible;
+            //StudentIpInput.Text = "123";
         }
     }
 }
