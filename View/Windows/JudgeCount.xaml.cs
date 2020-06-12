@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LiveCharts;
+using LiveCharts.Wpf;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FlameClassroom.UserControls;
 
 namespace FlameClassroom.Windows
 {
@@ -19,9 +22,17 @@ namespace FlameClassroom.Windows
     /// </summary>
     public partial class JudgeCount : Window
     {
-        public JudgeCount()
+        public JudgePlot judgePlot;
+        public JudgeCount(List<int> list)
         {
             InitializeComponent();
+            judgePlot = new JudgePlot(list);
+            plotPosition.Children.Add(judgePlot);
+        }
+
+        public void UpdateValues(List<int> list)
+        {
+            judgePlot.SetValues(list);
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

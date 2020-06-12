@@ -13,47 +13,8 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Judge Count" Foreground="#F26B3A" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black"/>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Label Content="A Count: " FontWeight="Bold" FontSize="15"></Label>
-                    <Label Content="0" Width="40" FontSize="15"></Label>
-                </StackPanel>
-
-                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Label Content="B Count: " FontWeight="Bold" FontSize="15"></Label>
-                    <Label Content="0" Width="40" FontSize="15"></Label>
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Label Content="C Count: " FontWeight="Bold" FontSize="15"></Label>
-                    <Label Content="0" Width="40" FontSize="15"></Label>
-                </StackPanel>
-
-                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Label Content="D Count: " FontWeight="Bold" FontSize="15"></Label>
-                    <Label Content="0" Width="40" FontSize="15"></Label>
-                </StackPanel>
-            </Grid>
-
+        <Label Grid.Row="0" Content="Selection Count" Foreground="#F26B3A" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black"/>
+        <Grid x:Name="targetPosition" Grid.Row="1">
         </Grid>
 
         <Button Grid.Row="2" x:Name="cancel" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"

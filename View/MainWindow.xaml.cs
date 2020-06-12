@@ -1,4 +1,7 @@
 ﻿using FlameClassroom.Pages;
+using FlameClassroom.Windows;
+using System.Collections.Generic;
+using System.Threading;
 using System.Windows;
 
 namespace FlameClassroom
@@ -31,6 +34,9 @@ namespace FlameClassroom
             teacherLivePage.parentWindow = this;
             studentLivePage.parentWindow = this;
 
+            //var page = new JudgeCount(new List<int> { 4, 5, 6});
+            //page.Show();
+            //page.UpdateValues(new List<int> { 1, 2, 3});
             mainFrame.Content = IPInputPage;
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlameClassroom.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,24 @@ namespace FlameClassroom.Windows
     /// </summary>
     public partial class SignCount : Window
     {
-        public SignCount()
+
+        public SignPlot signPlot;
+        public SignCount(List<int> list)
         {
             InitializeComponent();
+            signPlot = new SignPlot(list);
+            targetPosition.Children.Add(signPlot);
+        }
+
+        public void UpdateValues(List<int> list)
+        {
+            signPlot.SetValues(list);
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
+
 }
