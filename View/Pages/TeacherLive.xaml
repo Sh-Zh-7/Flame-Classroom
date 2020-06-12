@@ -10,10 +10,9 @@
       Title="Live">
     <Page.Resources>
         <Style TargetType="ListBoxItem" x:Key="itemStyle">
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="BorderBrush" Value="#FFFFFF"/>
-            <Setter Property="BorderThickness" Value="5"/>
-            <Setter Property="Background" Value="#AAAAAA"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
     </Page.Resources>
 
@@ -74,18 +73,18 @@
                     Click="Button_Click"></Button>
             <TextBlock Grid.Column="0" Text="&#xe756;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,251,20.2" />
             <ComboBox Text="Problem" Grid.Column="1" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
-                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Select</ListBoxItem>
+                <ListBoxItem Style="{StaticResource itemStyle}">Select</ListBoxItem>
                 <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Judge</ListBoxItem>
             </ComboBox>
             <TextBlock Grid.Column="1" Text="&#xe8b4;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,248,20.2" />
-            <ComboBox Text="Voice" Grid.Column="2" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
-                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Computer</ListBoxItem>
-                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Microphone</ListBoxItem>
+            <ComboBox x:Name="voice" Text="Voice" Grid.Column="2" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
+                <!--<ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Computer</ListBoxItem>
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Microphone</ListBoxItem>-->
             </ComboBox>
             <TextBlock Grid.Column="2" Text="&#xe64d;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,250,20.2" RenderTransformOrigin="0.115,0.533" />
-            <ComboBox Text="Video" Grid.Column="3" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
-                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Computer</ListBoxItem>
-                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Microphone</ListBoxItem>
+            <ComboBox x:Name="video" Text="Video" Grid.Column="3" Foreground="#F26B3A" Style="{StaticResource ComboBoxStyle}" FontSize="20">
+                <!--<ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Computer</ListBoxItem>
+                <ListBoxItem FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Microphone</ListBoxItem>-->
             </ComboBox>
             <TextBlock Grid.Column="3" Text="&#xe6a2;" Style="{StaticResource Icon}" FontSize="40" Foreground="#FFFFFF" Margin="10,22,248,20.2" RenderTransformOrigin="-0.186,0.527" />
         </Grid>

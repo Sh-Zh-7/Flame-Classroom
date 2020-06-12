@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlameClassroom.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,22 @@ namespace FlameClassroom.Windows
     /// </summary>
     public partial class SelectCount : Window
     {
-        public SelectCount()
+        public SelectionPlot selectionPlot;
+        public SelectCount(List<int> list)
         {
             InitializeComponent();
+            selectionPlot = new SelectionPlot(list);
+            targetPosition.Children.Add(selectionPlot);
+        }
+
+        public void UpdateValues(List<int> list)
+        {
+            selectionPlot.SetValues(list);
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

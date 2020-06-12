@@ -1,4 +1,7 @@
 ﻿using FlameClassroom.Pages;
+using FlameClassroom.Windows;
+using System.Collections.Generic;
+using System.Threading;
 using System.Windows;
 using Unosquare.FFME;
 using System.IO;
@@ -31,8 +34,14 @@ namespace FlameClassroom
             signUpPage.parentWindow = this;
             IPInputPage.parentWindow = this;
             teacherLivePage.parentWindow = this;
+
+            teacherLivePage.AddVoice(new List<string> { "Fuck", "Fuck2" });
+            teacherLivePage.AddVideo(new List<string> { "Damn", "Damn2" });
             studentLivePage.parentWindow = this;
 
+            //var page = new JudgeCount(new List<int> { 4, 5, 6});
+            //page.Show();
+            //page.UpdateValues(new List<int> { 1, 2, 3});
             mainFrame.Content = IPInputPage;
 
             Library.FFmpegDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin";

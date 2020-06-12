@@ -47,15 +47,5 @@ namespace FlameClassroom.Pages
             }
 
         }
-
-        private void SetTeachersName(string name)
-        {
-            teacherName.Text = name;
-        }
-
-        private void UpdateStudentList(List<Student> stuList)
-        {
-            personList.ItemsSource = stuList;
-        }
     }
 }

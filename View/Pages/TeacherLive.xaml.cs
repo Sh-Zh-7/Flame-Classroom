@@ -90,6 +90,30 @@ namespace FlameClassroom.Pages
             }
         }
 
+        private ListBoxItem CreateListBoxItemByName(string listBoxItemStr)
+        {
+            ListBoxItem listBoxItem = new ListBoxItem();
+            listBoxItem.Style = FindResource("itemStyle") as Style;
+            listBoxItem.Content = listBoxItemStr;
+            return listBoxItem;
+        }
+
+        public void AddVoice(List<string> voiceDeviceNames)
+        {
+            foreach(string voiceDeviceName in voiceDeviceNames)
+            {
+                voice.Items.Add(CreateListBoxItemByName(voiceDeviceName));
+            }
+        }
+
+        public void AddVideo(List<string> videoDeviceNames)
+        {
+            foreach (string videoDeviceName in videoDeviceNames)
+            {
+                video.Items.Add(CreateListBoxItemByName(videoDeviceName));
+            }
+        }
+
         private void SetTeachersName(string name)
         {
             teacherName.Text = name;
