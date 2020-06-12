@@ -53,7 +53,7 @@ namespace FlameClassroom.Backend
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    //Console.WriteLine(ex.Message);
                 }
             }
         }
@@ -88,14 +88,15 @@ namespace FlameClassroom.Backend
             }
             else if (StrArr[0] == "Login_NotExist")
             {
-
+                LoginNotExist(new EventArgs());
             }
             else if (StrArr[0] == "Login_WrongPassword")
             {
-
+                LoginWrongPassword(new EventArgs());
             }
             else if (StrArr[0] == "Login_Success")
             {
+                LoginSuccess(new EventArgs());
                 account = JsonConvert.DeserializeObject<Account>(StrArr[1]);
             }
             else if (StrArr[0] == "Register")
@@ -130,5 +131,33 @@ namespace FlameClassroom.Backend
                 AccountCreateEvent(this, e);
             }
         }
+
+        public event EventHandler LoginNotExistEvent;
+        public void LoginNotExist(EventArgs e)
+        {
+            if (LoginNotExistEvent != null)
+            {
+                LoginNotExistEvent(this, e);
+            }
+        }
+
+        public event EventHandler LoginWrongPasswordEvent;
+        public void LoginWrongPassword(EventArgs e)
+        {
+            if (LoginWrongPasswordEvent != null)
+            {
+                LoginWrongPasswordEvent(this, e);
+            }
+        }
+
+        public event EventHandler LoginSuccessEvent;
+        public void LoginSuccess(EventArgs e)
+        {
+            if (LoginSuccessEvent != null)
+            {
+                LoginSuccessEvent(this, e);
+            }
+        }
+
     }
 }

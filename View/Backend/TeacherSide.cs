@@ -121,16 +121,6 @@ namespace FlameClassroom.Backend
             {
                 CommuConnection.Send(Encoding.UTF8.GetBytes("CreateAcount_Success"));
                 AccountList.Add(UserName, new Account(UserName, Password));
-                CreateAcountEventHandler(new EventArgs());
-            }
-        }
-
-        public event EventHandler CreateAcountEvent;
-        public void CreateAcountEventHandler(EventArgs e)
-        {
-            if (CreateAcountEvent != null)
-            {
-                CreateAcountEvent(this, e);
             }
         }
 
@@ -197,6 +187,10 @@ namespace FlameClassroom.Backend
                 AccountList.Clear();
             }
             else if (File.ReadAllText(InfoPath) == "null")
+            {
+                AccountList.Clear();
+            }
+            else if (File.ReadAllText(InfoPath) == null)
             {
                 AccountList.Clear();
             }

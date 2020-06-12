@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FlameClassroom.Pages"
+      xmlns:ffme="clr-namespace:Unosquare.FFME;assembly=ffme.win"
       mc:Ignorable="d" 
       Height="700" Width="1200"
       Title="Live">
@@ -29,6 +30,8 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="1.3*"/>
             </Grid.ColumnDefinitions>
+            
+            <ffme:MediaElement Grid.Column="0" x:Name="Media" Background="Gray" LoadedBehavior="Play" UnloadedBehavior="Manual" />
 
             <ListBox Grid.Column="1" Background="#FFF2F2F2">
                 <ListBoxItem Height="50" BorderBrush="#FFFFFF" BorderThickness="5" Background="#000000"></ListBoxItem>
