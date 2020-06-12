@@ -83,19 +83,14 @@
                         <Label Content="Password: " Style="{StaticResource FormLabel}"></Label>
                         <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
                     </StackPanel>
+                    <Label x:Name="warning" Content="Account already exist!" FontSize="13" Margin="37, 10, 0, 0" Foreground="#F15A22" Visibility="Hidden"/>
                 </StackPanel>
 
-                <StackPanel Grid.Row="2">
+                <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Bottom">
+                    <CheckBox Margin="40, 6, 0, 0"></CheckBox>
                     <StackPanel Orientation="Horizontal">
-                        <CheckBox Margin="40, 6, 0, 0"></CheckBox>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="I agree to the" Margin="0, 0, 0, 0" FontSize="13"></Label>
-                            <Label Content="Term of Use" Margin="-7, 0, 0, 0"  FontSize="13" Foreground="#F15A22"></Label>
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <CheckBox Margin="40, 6, 0, 0" BorderBrush="#F15A22"></CheckBox>
-                        <Label Content="Keep me signed in" Margin="0, 0, 0, 0"  Foreground="#F15A22" FontSize="13"></Label>
+                        <Label Content="I agree to the" Margin="0, 0, 0, 0" FontSize="13"></Label>
+                        <Label Content="Term of Use" Margin="-7, 0, 0, 0"  FontSize="13" Foreground="#F15A22"></Label>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Row="3">

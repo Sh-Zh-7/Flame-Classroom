@@ -40,10 +40,7 @@
                 <Label Content="password: " Style="{StaticResource FormLabel}"></Label>
                 <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <CheckBox Margin="40, 15, 0, 0" BorderBrush="#F15A22"></CheckBox>
-                <Label Content="Keep me signed in" Margin="0, 8, 0, 0"  Foreground="#F15A22" FontSize="13"></Label>
-            </StackPanel>
+            <StackPanel Orientation="Horizontal"/>
         </StackPanel>
         <!-- Buttons -->
         <StackPanel Grid.Row="2">

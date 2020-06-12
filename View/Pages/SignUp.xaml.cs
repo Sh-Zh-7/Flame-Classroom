@@ -31,5 +31,10 @@ namespace FlameClassroom.Pages
         {
             parentWindow.mainFrame.Content = parentWindow.signInPage;
         }
+
+        private void ShowAccountExist()
+        {
+            warning.Visibility = Visibility.Visible;
+        }
     }
 }
