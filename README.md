@@ -28,24 +28,17 @@ The biggest disadvantage of this product is **the problem of architecture**. Liv
 
 ### Sign in:
 
-<img src="./assets/sign_in_page.png" width=400 float="left"/>
+<p align="center"><img src="./assets/sign_in_page.png" width=400 float="left"/></p>
 
 ### Sign up:
 
-<img src="./assets/create_account.png" width=600>
+<p align="center"><img src="./assets/create_account.png" width=600></p>
 
 ### After log in:
 
-<table>
-  <tr>
-    <td><img src="./assets/teacher_login.png" width=400/></td>
-    <td><img src="./assets/todo.png" width=400/></td>
-  </tr>
-  <tr>
-    <td><img src="./assets/about_us.png" width=400/></td>
-    <td><img src="./assets/thanks_for_using.png" width=400/></td>
-  </tr>
-</table>
+<img src="./assets/teacher_login.png" width=400/><img src="./assets/todo.png" width=400/>
+
+<img src="./assets/about_us.png" width=400/><img src="./assets/thanks_for_using.png" width=400/>
 
 ## TODO
 
