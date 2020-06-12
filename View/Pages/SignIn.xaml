@@ -34,11 +34,16 @@
         <StackPanel Grid.Row="1">
             <StackPanel Height="80">
                 <Label Content="username: " Style="{StaticResource FormLabel}"></Label>
-                <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
+                <!--<TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>-->
+                <Border BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Margin="40, 0, 40, 0">
+                    <TextBox BorderThickness="0" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}"></TextBox>
+                </Border>
             </StackPanel>
             <StackPanel>
                 <Label Content="password: " Style="{StaticResource FormLabel}"></Label>
-                <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text=""></TextBox>
+                <Border BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Margin="40, 0, 40, 0">
+                    <TextBox BorderThickness="0" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}"></TextBox>
+                </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal"/>
         </StackPanel>

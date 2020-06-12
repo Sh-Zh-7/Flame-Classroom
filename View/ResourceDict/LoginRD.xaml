@@ -86,8 +86,7 @@
     <Style x:Key="Form" TargetType="TextBox">
         <Setter Property="Height" Value="40"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="#2f2f2f"/>
         
         <Setter Property="Margin" Value="40, 0, 40, 0"/>
