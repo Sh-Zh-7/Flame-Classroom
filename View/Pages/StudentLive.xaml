@@ -46,9 +46,10 @@
                     </Button>
                 </Grid>
 
+                <Image Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Source="pack://application:,,,/Images/teacher.png" Height="40" Width="40" Margin="6, 0, 0, 0"/>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="teacherName" Width="100" Height="30" FontSize="20" FontWeight="Bold"  Text="123" Margin="70,8"/>
 
-                <ListBox Grid.Column="1" Background="#FFF2F2F2">
-                    <ListBoxItem Height="50" BorderBrush="#FFFFFF" BorderThickness="5" Background="#000000"></ListBoxItem>
+                <ListBox x:Name="personList" Grid.Column="1" Margin="0, 40, 0, 0" ItemTemplate="{StaticResource itemTemplate}">
                 </ListBox>
             </Grid>
 

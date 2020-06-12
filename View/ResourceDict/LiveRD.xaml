@@ -215,4 +215,18 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="TextBlock" x:Key="textStyle">
+        <Setter Property="Width" Value="125"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="25,0,0,0"/>
+    </Style>
+
+    <DataTemplate x:Key="itemTemplate">
+        <WrapPanel>
+            <Image Source="pack://application:,,,/Images/student.png" Height="40" Width="40"/>
+            <TextBlock Style="{StaticResource ResourceKey=textStyle}" Text="{Binding Name}"/>
+        </WrapPanel>
+    </DataTemplate>
 </ResourceDictionary>

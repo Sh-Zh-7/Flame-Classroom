@@ -15,6 +15,11 @@ using System.Windows.Shapes;
 
 namespace FlameClassroom.Pages
 {
+
+    public class Student
+    {
+        public string Name { get; set; }
+    }
     /// <summary>
     /// Live.xaml 的交互逻辑
     /// </summary>
@@ -25,6 +30,14 @@ namespace FlameClassroom.Pages
         public TeacherLive()
         {
             InitializeComponent();
+
+            List<Student> students = new List<Student>
+            {
+                new Student() {Name="shzh"},
+                new Student() {Name="1234"}
+            };
+            UpdateStudentList(students);
+            SetTeachersName("1234");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -52,6 +65,16 @@ namespace FlameClassroom.Pages
                 liveCondition = "stop";
             }
 
+        }
+
+        private void SetTeachersName(string name)
+        {
+            teacherName.Text = name;
+        }
+
+        private void UpdateStudentList(List<Student> stuList)
+        {
+            personList.ItemsSource = stuList;
         }
     }
 }
