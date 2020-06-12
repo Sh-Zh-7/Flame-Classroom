@@ -44,7 +44,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-20, 0, 0, 0">
                 <Label FontSize="18" Foreground="#CCCCCC" FontWeight="Bold">Name</Label>
-                <TextBlock Foreground="#6E6E6E" FontSize="15" HorizontalAlignment="Center">ShZh</TextBlock>
+                <TextBlock Foreground="#6E6E6E" FontSize="15" HorizontalAlignment="Center" Text="undefine"></TextBlock>
             </StackPanel>
 
         </Grid>

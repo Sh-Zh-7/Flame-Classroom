@@ -1,0 +1,62 @@
+﻿<Window x:Class="FlameClassroom.Windows.SelectCount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlameClassroom.Windows"
+        mc:Ignorable="d"
+        Title="SelectCount" Height="250" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Judge Count" Foreground="#F26B3A" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="A Count: " FontWeight="Bold" FontSize="15"></Label>
+                    <Label Content="0" Width="40" FontSize="15"></Label>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="B Count: " FontWeight="Bold" FontSize="15"></Label>
+                    <Label Content="0" Width="40" FontSize="15"></Label>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="C Count: " FontWeight="Bold" FontSize="15"></Label>
+                    <Label Content="0" Width="40" FontSize="15"></Label>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="D Count: " FontWeight="Bold" FontSize="15"></Label>
+                    <Label Content="0" Width="40" FontSize="15"></Label>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+
+        <Button Grid.Row="2" x:Name="cancel" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
+                Content="Cancel" Height="30" Width="280" Foreground="#FFFFFF" Click="Cancel_Click"></Button>
+    </Grid>
+</Window>

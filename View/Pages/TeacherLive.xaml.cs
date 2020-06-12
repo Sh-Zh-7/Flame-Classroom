@@ -34,7 +34,7 @@ namespace FlameClassroom.Pages
             List<Student> students = new List<Student>
             {
                 new Student() {Name="shzh"},
-                new Student() {Name="1234"}
+                new Student() {Name="1234"},
             };
             UpdateStudentList(students);
             SetTeachersName("1234");

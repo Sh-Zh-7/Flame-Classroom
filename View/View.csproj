@@ -84,6 +84,9 @@
     <Compile Include="Windows\Judege.xaml.cs">
       <DependentUpon>Judege.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\JudgeCount.xaml.cs">
+      <DependentUpon>JudgeCount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Select.xaml.cs">
       <DependentUpon>Select.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Judege.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\JudgeCount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
