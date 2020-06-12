@@ -13,12 +13,17 @@ namespace FlameClassroom.Backend
     {
         private Socket ListenSocket = null;
         private Thread CommuThread = null;
+
+        public string TeatherIP { set; get; }
+
+        public string Name { set; get; }
         public Dictionary<string, ConnectionState> ConnectionList = new Dictionary<string, ConnectionState>();
 
         public Dictionary<string, Account> AccountList = new Dictionary<string, Account>();
 
         public TeacherSide(string IPstring)
         {
+            TeatherIP = IPstring;
             ListenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPAddress address = IPAddress.Parse(IPstring);
             IPEndPoint point = new IPEndPoint(address, 3230);
@@ -29,7 +34,6 @@ namespace FlameClassroom.Backend
             Thread WatchThread = new Thread(WatchConnection);
             WatchThread.IsBackground = true;
             WatchThread.Start();
-            WatchConnection();
             InitStudentInfo();
             //Console.WriteLine("Start watch");
             //Console.WriteLine("-----");
@@ -108,7 +112,6 @@ namespace FlameClassroom.Backend
             {
                 ChangeInfo(StrArr, CommuConnection);
             }
-
         }
 
         public void CreateAcount(string[] StrArr, Socket CommuConnection)
@@ -163,6 +166,22 @@ namespace FlameClassroom.Backend
             }
         }
 
+        public void PublishTFQuestion()
+        {
+            foreach (ConnectionState item in ConnectionList.Values)
+            {
+                item.Connection.Send(Encoding.UTF8.GetBytes("TF"));
+            }
+        }
+
+        public void PublishChoiceQuestion()
+        {
+            foreach (ConnectionState item in ConnectionList.Values)
+            {
+                item.Connection.Send(Encoding.UTF8.GetBytes("CHOICE"));
+            }
+        }
+
         public void InitStudentInfo()
         {
             string InfoPath = Directory.GetCurrentDirectory() + @"\StudentInfo.json";
@@ -170,6 +189,14 @@ namespace FlameClassroom.Backend
             {
                 FileStream fs = new FileStream(InfoPath, FileMode.Create, FileAccess.ReadWrite);
                 fs.Close();
+                AccountList.Clear();
+            }
+            else if (File.ReadAllText(InfoPath) == "null")
+            {
+                AccountList.Clear();
+            }
+            else if (File.ReadAllText(InfoPath) == null)
+            {
                 AccountList.Clear();
             }
             else
@@ -182,6 +209,11 @@ namespace FlameClassroom.Backend
         {
             string InfoPath = Directory.GetCurrentDirectory() + @"\StudentInfo.json";
             File.WriteAllText(InfoPath, JsonConvert.SerializeObject(AccountList));
+        }
+
+        ~TeacherSide()
+        {
+            RenewStudentInfo();
         }
     }
 }

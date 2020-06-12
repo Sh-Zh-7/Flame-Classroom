@@ -3,6 +3,8 @@ using FlameClassroom.Windows;
 using System.Collections.Generic;
 using System.Threading;
 using System.Windows;
+using Unosquare.FFME;
+using System.IO;
 
 namespace FlameClassroom
 {
@@ -38,6 +40,9 @@ namespace FlameClassroom
             //page.Show();
             //page.UpdateValues(new List<int> { 1, 2, 3});
             mainFrame.Content = IPInputPage;
+
+            Library.FFmpegDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin";
+            Library.LoadFFmpeg();
         }
     }
 }

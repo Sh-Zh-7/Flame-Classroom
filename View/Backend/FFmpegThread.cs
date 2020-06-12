@@ -45,6 +45,12 @@ namespace FlameClassroom.Backend
         private string _Address;
         private string _FileName;
 
+        private string _LibraryDirectory;
+        public string LibraryDirectory
+        {
+            get => _LibraryDirectory;
+        }
+
         private string _VideoDevice;
         private string _AudioDevice;
         private string _VideoDecoder;
@@ -60,23 +66,24 @@ namespace FlameClassroom.Backend
 
         public void InitDownload()
         {
-            if (!File.Exists(Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin\ffmpeg.exe"))
+            /*if (!File.Exists(Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin\ffmpeg.exe"))
             {
                 //Console.WriteLine("File doesn't exist!");
                 var downloadClient = new WebClient();
                 downloadClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadFileCallback);
                 downloadClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
                 downloadClient.DownloadFileAsync(new Uri("https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-4.2.1-win64-shared.zip"), Directory.GetCurrentDirectory() + @"\ffmpeg.zip");
-            }
+            }*/
 
-            else
+            /*else
             {
-            }
+            }*/
         }
 
         public void InitFileName()
         {
             _FileName = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin\ffmpeg.exe";
+            _LibraryDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin";
         }
 
         private void DownloadProgressCallback(object sender, DownloadProgressChangedEventArgs e)

@@ -42,5 +42,20 @@ namespace FlameClassroom.Pages.SubPages
                 avatar.Fill = myImageBrush;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(parentWindow.identification == "student")
+            {
+                MessageBox.Show("修改信息成功（学生端）");
+                //TODO:messagebox
+                App.student.ChangeInfo(UserInfoSchool.Text, UserInfoID.Text, UserInfoName.Text, UserInfoDescription.Text);
+                this.parentWindow.homePage.mainPage.ChangedInfo(UserInfoName.Text, UserInfoDescription.Text, UserInfoSchool.Text, UserInfoID.Text);
+            }
+            else if(parentWindow.identification == "teacher")
+            {
+                this.parentWindow.homePage.mainPage.ChangedInfo(UserInfoName.Text, UserInfoDescription.Text, UserInfoSchool.Text, UserInfoID.Text);
+            }
+        }
     }
 }
