@@ -25,6 +25,17 @@ namespace FlameClassroom.Pages.SubPages
                 ImageBrush myImageBrush = new ImageBrush();
                 myImageBrush.ImageSource = new BitmapImage(new Uri("Images/student.png", UriKind.Relative));
                 avatar.Fill = myImageBrush;
+                if(App.student.account.Init==false)
+                {
+                    this.Dispatcher.BeginInvoke((Action)delegate ()
+                    {
+                        MainPageName1.Content = App.student.account.Name;
+                        MainPageDescription.Content = App.student.account.Description;
+                        MainPageSchool.Text = App.student.account.School;
+                        MainPageID.Text = App.student.account.ID;
+                        MainPageName.Text = App.student.account.Name;
+                    });
+                }
             }
             else if (parentWindow.identification == "teacher")
             {
@@ -60,6 +71,15 @@ namespace FlameClassroom.Pages.SubPages
                 parentWindow.mainFrame.Content = newInputPage;
             }
             
+        }
+
+        public void ChangedInfo(string Name,string Description,string School,string ID)
+        {
+            this.MainPageName1.Content = Name;
+            this.MainPageDescription.Content = Description;
+            this.MainPageSchool.Text = School;
+            this.MainPageName.Text = Name;
+            this.MainPageID.Text = ID;
         }
     }
 }

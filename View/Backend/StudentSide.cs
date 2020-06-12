@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading;
 using System.Net.Sockets;
 using System.Net;
+using System.IO;
 using Newtonsoft.Json;
 
 namespace FlameClassroom.Backend
@@ -14,8 +15,12 @@ namespace FlameClassroom.Backend
         private Socket ConnectSocket = null;
 
         public Account account = null;
+
+        public string TeatherIP { set; get; }
         public StudentSide(string IPstring)
         {
+            TeatherIP = IPstring;
+
             ConnectSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             IPAddress address = IPAddress.Parse(IPstring);
@@ -75,6 +80,15 @@ namespace FlameClassroom.Backend
             //TODO:在页面中渲染
         }
 
+        public void TFsend(string choice)
+        {
+            ConnectSocket.Send(Encoding.UTF8.GetBytes("TF" + " " + choice));
+        }
+
+        public void Choice(string choice)
+        {
+            ConnectSocket.Send(Encoding.UTF8.GetBytes("CHOICE" + " " + choice));
+        }
         public void Route(string Message)
         {
             string[] StrArr = Message.Split(new char[] { ' ' });
@@ -96,22 +110,21 @@ namespace FlameClassroom.Backend
             }
             else if (StrArr[0] == "Login_Success")
             {
-                LoginSuccess(new EventArgs());
                 account = JsonConvert.DeserializeObject<Account>(StrArr[1]);
+                LoginSuccess(new EventArgs());
             }
             else if (StrArr[0] == "Register")
             {
-
+                Register(new EventArgs());
             }
             else if (StrArr[0] == "TF")
             {
-
+                TF(new EventArgs());
             }
             else if (StrArr[0] == "CHOICE")
             {
-
+                Choice(new EventArgs());
             }
-
         }
 
         public event EventHandler AccountExistEvent;
@@ -156,6 +169,34 @@ namespace FlameClassroom.Backend
             if (LoginSuccessEvent != null)
             {
                 LoginSuccessEvent(this, e);
+            }
+        }
+
+        public event EventHandler RegisterEvent;
+        public void Register(EventArgs e)
+        {
+            if (RegisterEvent != null)
+            {
+                RegisterEvent(this, e);
+            }
+        }
+
+        public event EventHandler TFEvent;
+
+        public void TF(EventArgs e)
+        {
+            if (TFEvent != null)
+            {
+                TFEvent(this, e);
+            }
+        }
+
+        public event EventHandler ChoiceEvent;
+        public void Choice(EventArgs e)
+        {
+            if (ChoiceEvent != null)
+            {
+                ChoiceEvent(this, e);
             }
         }
 

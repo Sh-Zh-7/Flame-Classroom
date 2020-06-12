@@ -39,6 +39,7 @@ namespace FlameClassroom.Pages
             else if (parentWindow.identification == "teacher")
             {
                 App.teacher = new TeacherSide(TeacherIpInput.Text);
+                App.teacher.Name = TeacherNameInput.Text;
                 parentWindow.homePage = new HomePage(parentWindow);
                 parentWindow.mainFrame.Content = parentWindow.homePage;
 

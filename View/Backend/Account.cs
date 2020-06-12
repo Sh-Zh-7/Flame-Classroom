@@ -5,6 +5,7 @@ using System.Threading;
 using System.Net.Sockets;
 using System.Net;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace FlameClassroom.Backend
 {
@@ -33,10 +34,24 @@ namespace FlameClassroom.Backend
         public string ID { set; get; }
         public string Name { set; get; }
         public string Description { set; get; }
+
+        public bool Init { set; get; }
         public Account(string UserName, string Password)
         {
             this.UserName = UserName;
             this.Password = Password;
+            this.Init = true;
+        }
+        [JsonConstructor]
+        public Account(string UserName, string Password, string School, string ID, string Name, string Description, bool Init)
+        {
+            this.UserName = UserName;
+            this.Password = Password;
+            this.School = School;
+            this.ID = ID;
+            this.Name = Name;
+            this.Description = Description;
+            this.Init = Init;
         }
         public void ChangeInfo(string School, string ID, string Name, string Description)
         {
@@ -44,6 +59,7 @@ namespace FlameClassroom.Backend
             this.ID = ID;
             this.Name = Name;
             this.Description = Description;
+            this.Init = false;
         }
     }
 }

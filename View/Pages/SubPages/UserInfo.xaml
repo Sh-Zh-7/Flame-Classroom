@@ -27,19 +27,19 @@
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="School: " Style="{StaticResource FormLabel}"></Label>
                     <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
-                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="25" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                        <TextBox x:Name="UserInfoSchool" HorizontalContentAlignment="Left" BorderThickness="0" Height="25" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="ID: " Style="{StaticResource FormLabel}"></Label>
                     <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
-                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                        <TextBox x:Name="UserInfoID" HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="Name: " Style="{StaticResource FormLabel}"></Label>
                     <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
-                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                        <TextBox x:Name="UserInfoName"  HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
                     </Border>
                 </StackPanel>
             </StackPanel>
@@ -62,11 +62,11 @@
             <StackPanel Orientation="Vertical">
                 <Label Content="Description: " Style="{StaticResource FormLabel}"></Label>
                 <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="100" Margin="40, 0, 10, 0">
-                    <TextBox HorizontalContentAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Margin="5, 0, 0, 0" Height="95" Text="" TextWrapping="Wrap" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                    <TextBox x:Name="UserInfoDescription" VerticalAlignment="Top" BorderThickness="0" Margin="5, 0, 0, 0" Height="95" Text="" TextWrapping="Wrap" Style="{StaticResource Form}" FontSize="15"></TextBox>
                 </Border>
             </StackPanel>
         </Grid>
         <Button Grid.Row="3" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Width="250" Height="40" Content="Confirm"
-                Foreground="#FFFFFF" FontSize="15"></Button>
+                Foreground="#FFFFFF" FontSize="15" Click="Button_Click"></Button>
     </Grid>
 </Page>

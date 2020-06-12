@@ -13,12 +13,17 @@ namespace FlameClassroom.Backend
     {
         private Socket ListenSocket = null;
         private Thread CommuThread = null;
+
+        public string TeatherIP { set; get; }
+
+        public string Name { set; get; }
         public Dictionary<string, ConnectionState> ConnectionList = new Dictionary<string, ConnectionState>();
 
         public Dictionary<string, Account> AccountList = new Dictionary<string, Account>();
 
         public TeacherSide(string IPstring)
         {
+            TeatherIP = IPstring;
             ListenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPAddress address = IPAddress.Parse(IPstring);
             IPEndPoint point = new IPEndPoint(address, 3230);
