@@ -116,7 +116,7 @@ namespace FlameClassroom.Backend
             }
             else if (StrArr[0] == "Registering")
             {
-                ChangeRegi();
+                //ChangeRegi();
             }
             else if (StrArr[0] == "TF")
             {

@@ -226,7 +226,7 @@
     <DataTemplate x:Key="itemTemplate">
         <WrapPanel>
             <Image Source="pack://application:,,,/Images/student.png" Height="40" Width="40"/>
-            <TextBlock Style="{StaticResource ResourceKey=textStyle}" Text="{Binding Name} " Width="200"/>
+            <TextBlock Width="200" Style="{StaticResource ResourceKey=textStyle}" Text="{Binding Name}"/>
         </WrapPanel>
     </DataTemplate>
 </ResourceDictionary>
