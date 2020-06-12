@@ -42,7 +42,7 @@
             <StackPanel>
                 <Label Content="password: " Style="{StaticResource FormLabel}"></Label>
                 <Border BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Margin="40, 0, 40, 0">
-                    <TextBox BorderThickness="0" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}"></TextBox>
+                    <PasswordBox BorderThickness="0" Margin="5, 0, 0, 0" Style="{StaticResource PasswordForm}"></PasswordBox>
                 </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal"/>

@@ -91,4 +91,12 @@
         
         <Setter Property="Margin" Value="40, 0, 40, 0"/>
     </Style>
+    <Style x:Key="PasswordForm" TargetType="PasswordBox">
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#2f2f2f"/>
+
+        <Setter Property="Margin" Value="40, 0, 40, 0"/>
+    </Style>
 </ResourceDictionary>
