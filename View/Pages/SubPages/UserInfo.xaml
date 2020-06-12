@@ -26,15 +26,21 @@
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="School: " Style="{StaticResource FormLabel}"></Label>
-                    <TextBox Template="{StaticResource BorderInput}"  Height="30" Style="{StaticResource Form}" Text="" Margin="35,0,9.6,0"></TextBox>
+                    <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
+                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="25" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                    </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="ID: " Style="{StaticResource FormLabel}"></Label>
-                    <TextBox Template="{StaticResource BorderInput}"  Height="30" Style="{StaticResource Form}" Text="" Margin="35,0,9.6,0"></TextBox>
+                    <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
+                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                    </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="0, 10, 0, 0">
                     <Label Content="Name: " Style="{StaticResource FormLabel}"></Label>
-                    <TextBox Template="{StaticResource BorderInput}"  Height="30" Style="{StaticResource Form}" Text="" Margin="35,0,9.6,0"></TextBox>
+                    <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="30" Margin="40, 0, 10, 0">
+                        <TextBox HorizontalContentAlignment="Left" BorderThickness="0" Height="20" Margin="5, -5, 0, 0" Text="" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                    </Border>
                 </StackPanel>
             </StackPanel>
 
@@ -51,31 +57,14 @@
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2.5*"/>
-                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Orientation="Vertical">
                 <Label Content="Description: " Style="{StaticResource FormLabel}"></Label>
-                <TextBox Template="{StaticResource BorderInput}"  Style="{StaticResource Form}" Text="" Margin="35,0,9.6,0" Height="93"></TextBox>
+                <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="100" Margin="40, 0, 10, 0">
+                    <TextBox HorizontalContentAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Margin="5, 0, 0, 0" Height="95" Text="" TextWrapping="Wrap" Style="{StaticResource Form}" FontSize="15"></TextBox>
+                </Border>
             </StackPanel>
-
-            <StackPanel Grid.Column="1" Orientation="Vertical">
-                <StackPanel Orientation="Vertical">
-                    <Label Content="Voice divice" Margin="15, 0, 0, 0" Style="{StaticResource FormLabel}"></Label>
-                    <ComboBox Width="170" Height="30" FontSize="14">
-                        <ListBoxItem FontSize="15">Computer</ListBoxItem>
-                        <ListBoxItem FontSize="15">Microphone</ListBoxItem>
-                    </ComboBox>
-                </StackPanel>
-                <StackPanel Margin="0, 10, 0, 0">
-                    <Label Content="Image device" Margin="15, 0, 0, 0" Style="{StaticResource FormLabel}"></Label>
-                    <ComboBox Width="170" Height="30" FontSize="14">
-                        <ListBoxItem FontSize="15">Camera</ListBoxItem>
-                        <ListBoxItem FontSize="15">Computer Screen</ListBoxItem>
-                    </ComboBox>
-                </StackPanel>
-            </StackPanel>
-            <!--<Rectangle Grid.ColumnSpan="2" VerticalAlignment="Bottom" Fill="#CCCCCC" Height="2" Width="380"></Rectangle>-->
         </Grid>
         <Button Grid.Row="3" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Width="250" Height="40" Content="Confirm"
                 Foreground="#FFFFFF" FontSize="15"></Button>

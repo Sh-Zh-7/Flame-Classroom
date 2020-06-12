@@ -16,28 +16,24 @@ using System.Windows.Shapes;
 namespace FlameClassroom.Pages
 {
     /// <summary>
-    /// SignUp.xaml 的交互逻辑
+    /// Live.xaml 的交互逻辑
     /// </summary>
-
-    public partial class SignUp : Page
+    public partial class TeacherLive : Page
     {
         public MainWindow parentWindow { set; get; }
-        public SignUp()
+        public TeacherLive()
         {
             InitializeComponent();
         }
 
-        private void SignIn_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            parentWindow.mainFrame.Content = parentWindow.signInPage;
+            MessageBox.Show("Fuck");
         }
 
-        private void Create_Click(object sender, RoutedEventArgs e)
+        private void End_Click(object sender, RoutedEventArgs e)
         {
-            App.student.CreatAccount(SignupUserName.Text, SignupUserName.Text);
-        }
-        private void ShowAccountExist()
-        {
-            warning.Visibility = Visibility.Visible;
+            parentWindow.mainFrame.Content = parentWindow.homePage;
         }
     }
+}

@@ -35,12 +35,18 @@ namespace FlameClassroom.Pages
             {
                 App.student = new StudentSide(StudentIpInput.Text);
                 parentWindow.mainFrame.Content = parentWindow.signInPage;
+<<<<<<< HEAD
             }
             else if (parentWindow.identification == "teacher")
+=======
+                
+            } else if (parentWindow.identification == "teacher")
+>>>>>>> af2926e280b0172b9abd05811f1b7f576fa6b714
             {
                 App.teacher = new TeacherSide(TeacherIpInput.Text);
                 parentWindow.homePage = new HomePage(parentWindow);
                 parentWindow.mainFrame.Content = parentWindow.homePage;
+
             }
         }
 
@@ -54,7 +60,7 @@ namespace FlameClassroom.Pages
 
         private void StudentBtn_Click(object sender, RoutedEventArgs e)
         {
-            Height = 400;
+            Height = 500;
             parentWindow.identification = "student";
             teacherSubmit.Visibility = Visibility.Hidden;
             studentSubmit.Visibility = Visibility.Visible;

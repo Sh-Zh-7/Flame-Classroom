@@ -77,14 +77,14 @@ namespace FlameClassroom.Backend
 
         public void Route(string Message)
         {
-            string[] StrArr = Message.Split(new char[] { ' '});
+            string[] StrArr = Message.Split(new char[] { ' ' });
             if (StrArr[0] == "CreateAcount_Exist")
             {
-
+                AccountExist(new EventArgs());
             }
             else if (StrArr[0] == "CreateAcount_Success")
             {
-
+                AccountCreate(new EventArgs());
             }
             else if (StrArr[0] == "Login_NotExist")
             {
@@ -102,7 +102,33 @@ namespace FlameClassroom.Backend
             {
 
             }
+            else if (StrArr[0] == "TF")
+            {
 
+            }
+            else if (StrArr[0] == "CHOICE")
+            {
+
+            }
+
+        }
+
+        public event EventHandler AccountExistEvent;
+        public void AccountExist(EventArgs e)
+        {
+            if (AccountExistEvent != null)
+            {
+                AccountExistEvent(this, e);
+            }
+        }
+
+        public event EventHandler AccountCreateEvent;
+        public void AccountCreate(EventArgs e)
+        {
+            if (AccountCreateEvent != null)
+            {
+                AccountCreateEvent(this, e);
+            }
         }
     }
 }

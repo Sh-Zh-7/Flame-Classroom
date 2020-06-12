@@ -49,6 +49,6 @@
 
         </Grid>
         <Button Grid.Row="3" x:Name="listen" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
-                Content="Listen" Height="50" Width="280" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="Listen_Click"></Button>
+                Content="Start" Height="50" Width="280" Foreground="#FFFFFF" Margin="0, 10, 0, 0" Click="Listen_Click"></Button>
     </Grid>
 </Page>

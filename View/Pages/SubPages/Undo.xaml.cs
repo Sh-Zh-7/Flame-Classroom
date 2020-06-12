@@ -13,27 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FlameClassroom.Pages
+namespace FlameClassroom.Pages.SubPages
 {
     /// <summary>
-    /// Live.xaml 的交互逻辑
+    /// Undo.xaml 的交互逻辑
     /// </summary>
-    public partial class Live : Page
+    public partial class Undo : Page
     {
-        public MainWindow parentWindow { set; get; }
-        public Live()
+        public Undo()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Fuck");
-        }
-
-        private void End_Click(object sender, RoutedEventArgs e)
-        {
-            parentWindow.mainFrame.Content = parentWindow.homePage;
         }
     }
 }

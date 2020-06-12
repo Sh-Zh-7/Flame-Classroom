@@ -49,10 +49,11 @@
             </Grid.RowDefinitions>
 
             <Rectangle Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Top"/>
-            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your teacher's IP:" Foreground="#000000"/>
-            <TextBox x:Name="StudentIpInput" Grid.Row="1" Text=""></TextBox>
-            <!--<TextBox x:Name="StudentIpInput" Grid.Row="1" Template="{StaticResource BorderInput}" Style="{StaticResource Form}" Text=""></TextBox>-->
-            <Button Grid.Row="2" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Foreground="#FFFFFF" FontSize="20" Height="40" Click="Button_Click" />
+            <Label Grid.Row="0" FontWeight="Bold" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your teacher's IP:" Foreground="#AAAAAA"/>
+            <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="50" Margin="40, 0, 40, 0">
+                <TextBox x:Name="StudentIpInput" HorizontalContentAlignment="Center" BorderThickness="0" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}" FontSize="20" FontWeight="Bold"></TextBox>
+            </Border>
+            <Button Grid.Row="2" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Foreground="#FFFFFF" FontSize="20" Height="50" Click="Button_Click" />
         </Grid>
 
         <Grid x:Name="teacherSubmit" Grid.Row="1" Visibility="Hidden">
@@ -66,12 +67,14 @@
             </Grid.RowDefinitions>
 
             <Rectangle Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Top"/>
-            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input username:" Foreground="#000000"/>
-            <TextBox x:Name="TeacherNameInput" Grid.Row="1" Text=""></TextBox>
-            <!--<TextBox Grid.Row="1" Template="{StaticResource BorderInput}" Style="{StaticResource Form}" Text=""></TextBox>-->
-            <Label Grid.Row="2" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your IP:" Foreground="#000000"/>
-            <TextBox x:Name="TeacherIpInput" Grid.Row="3" Text=""></TextBox>
-            <!-- <TextBox Grid.Row="3" Template="{StaticResource BorderInput}" Style="{StaticResource Form}" Text=""></TextBox> -->
+            <Label Grid.Row="0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input username:" Foreground="#AAAAAA"/>
+            <Border Grid.Row="1" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="50" Margin="40, 0, 40, 0">
+                <TextBox x:Name="TeacherNameInput" BorderThickness="0" HorizontalContentAlignment="Center" Margin="5, 0, 0, 0" Text="" Style="{StaticResource Form}" FontSize="20" FontWeight="Bold"></TextBox>
+            </Border>
+            <Label Grid.Row="2" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Input your IP:" Foreground="#AAAAAA"/>
+            <Border Grid.Row="3" BorderBrush="#D4D4D4" Background="#FFFFFF" BorderThickness="1" CornerRadius="10" Height="50" Margin="40, 0, 40, 0">
+                <TextBox x:Name="TeacherIpInput" BorderThickness="0" Margin="5, 0, 0, 0" Text="" HorizontalContentAlignment="Center" Style="{StaticResource Form}" FontSize="20" FontWeight="Bold"></TextBox>
+            </Border>
             <Button Grid.Row="4" Content="Submit" Width="200" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}" Foreground="#FFFFFF" FontSize="20" Height="40" Click="Button_Click"/>
         </Grid>
     </Grid>

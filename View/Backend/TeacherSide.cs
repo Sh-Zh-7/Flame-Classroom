@@ -173,12 +173,18 @@ namespace FlameClassroom.Backend
 
         public void PublishTFQuestion()
         {
-
+            foreach (ConnectionState item in ConnectionList.Values)
+            {
+                item.Connection.Send(Encoding.UTF8.GetBytes("TF"));
+            }
         }
 
         public void PublishChoiceQuestion()
         {
-
+            foreach (ConnectionState item in ConnectionList.Values)
+            {
+                item.Connection.Send(Encoding.UTF8.GetBytes("CHOICE"));
+            }
         }
 
         public void InitStudentInfo()

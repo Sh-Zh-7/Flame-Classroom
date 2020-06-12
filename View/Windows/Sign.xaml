@@ -1,0 +1,24 @@
+﻿<Window x:Class="FlameClassroom.Windows.Sign"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlameClassroom.Windows"
+        mc:Ignorable="d"
+        Title="Sign" Height="200" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Fill="#FFFFFF" Grid.RowSpan="2"/>
+
+        <Label Grid.Row="0" Content="Sign if you are here"  HorizontalAlignment="Center" VerticalAlignment="Center"
+               FontSize="20" FontWeight="Bold">
+        </Label>
+        <Rectangle Height="1" Width="400" Fill="#AAAAAA" VerticalAlignment="Bottom"></Rectangle>
+        <Button Grid.Row="1" x:Name="sign" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource RedButtonTrigger}"
+                Content="Sign in" Height="42" Width="321" Foreground="#FFFFFF" Click="Sign_Click"></Button>
+    </Grid>
+</Window>

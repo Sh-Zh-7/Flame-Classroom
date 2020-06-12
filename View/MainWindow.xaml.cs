@@ -1,19 +1,5 @@
 ﻿using FlameClassroom.Pages;
-using FlameClassroom.Pages.SubPages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FlameClassroom
 {
@@ -28,7 +14,8 @@ namespace FlameClassroom
         public HomePage homePage;
         public IPInput IPInputPage = new IPInput();
         // Live environment
-        public Live livePage = new Live();
+        public TeacherLive teacherLivePage = new TeacherLive();
+        public StudentLive studentLivePage = new StudentLive();
 
         // Identification
         public string identification;
@@ -41,8 +28,9 @@ namespace FlameClassroom
             signInPage.parentWindow = this;
             signUpPage.parentWindow = this;
             IPInputPage.parentWindow = this;
-            livePage.parentWindow = this;
-            
+            teacherLivePage.parentWindow = this;
+            studentLivePage.parentWindow = this;
+
             mainFrame.Content = IPInputPage;
         }
     }
