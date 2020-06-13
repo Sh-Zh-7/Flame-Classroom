@@ -82,8 +82,8 @@ namespace FlameClassroom.Backend
 
         public void InitFileName()
         {
-            _FileName = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin\ffmpeg.exe";
-            _LibraryDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin";
+            _FileName = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg.exe";
+            _LibraryDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg\bin";
         }
 
         private void DownloadProgressCallback(object sender, DownloadProgressChangedEventArgs e)
