@@ -48,10 +48,8 @@ The biggest disadvantage of this product is **the problem of architecture**. Liv
 <p align="center"><img src="./assets/create_account.png" width=600></p>
 
 ### After log in:
-<p align="center">
 <img src="./assets/teacher_login.png" width=450 height=400/><img src="./assets/todo.png" width=450 height=400/>
 <img src="./assets/about_us.png" width=450 height=400/><img src="./assets/thanks_for_using.png" width=450 height=400/>
-</p>
 
 ## Live Part
 
