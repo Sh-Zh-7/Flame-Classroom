@@ -44,7 +44,7 @@ namespace FlameClassroom
             //page.UpdateValues(new List<int> { 1, 2, 3});
             mainFrame.Content = IPInputPage;
 
-            Library.FFmpegDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg\ffmpeg-4.2.1-win64-shared\bin";
+            Library.FFmpegDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg";
             Library.LoadFFmpeg();
         }
     }
