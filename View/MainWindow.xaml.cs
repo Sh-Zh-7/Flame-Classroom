@@ -39,9 +39,6 @@ namespace FlameClassroom
             teacherLivePage.AddVideo(App.ffmpegthread.VideoList);
             studentLivePage.parentWindow = this;
 
-            //var page = new JudgeCount(new List<int> { 4, 5, 6});
-            //page.Show();
-            //page.UpdateValues(new List<int> { 1, 2, 3});
             mainFrame.Content = IPInputPage;
 
             Library.FFmpegDirectory = Directory.GetCurrentDirectory() + @"\ffmpeg";

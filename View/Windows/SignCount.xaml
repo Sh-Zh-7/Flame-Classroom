@@ -6,7 +6,7 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:local="clr-namespace:FlameClassroom.Windows"
         mc:Ignorable="d"
-        Title="SignCount" Height="250" Width="400">
+        Title="SignCount" Height="450" Width="670">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -14,11 +14,11 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Sign Count" Foreground="#F26B3A" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black"/>
+        <Label Grid.Row="0" Content="Sign Count" Foreground="#F26B3A" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Black"/>
         <Grid x:Name="targetPosition" Grid.Row="1">
         </Grid>
 
         <Button Grid.Row="2" x:Name="cancel" HorizontalAlignment="Center" Template="{StaticResource LoginButton}" Style="{StaticResource GreenButtonTrigger}"
-                Content="Cancel" Height="30" Width="280" Foreground="#FFFFFF" Click="Cancel_Click"></Button>
+                Content="Cancel" Height="45" Width="400" FontSize="25" Foreground="#FFFFFF" Click="Cancel_Click"></Button>
     </Grid>
 </Window>
